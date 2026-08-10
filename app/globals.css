@@ -1,26 +1,288 @@
 @import "tailwindcss";
 
 :root {
+  --primary: #1a2e4a;
+  --accent: #e74c3c;
+  --accent-hover: #d63f34;
+  --secondary: #f5f5f5;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a2e4a;
+  --body: #333333;
 }
 
 @theme inline {
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-secondary: var(--secondary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-body: var(--body);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Scroll fade-in */
+.fade-in-el {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 600ms ease-out,
+    transform 600ms ease-out;
+}
+
+.fade-in-el.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Shared section rhythm */
+.section-pad {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.container-site {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-site {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-site {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.heading-h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  .heading-h1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-h1 {
+    font-size: 48px;
+  }
+}
+
+.heading-h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .heading-h2 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading-h2 {
+    font-size: 36px;
+  }
+}
+
+.body-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--body);
+}
+
+/* CTA button hover scale */
+.btn-cta {
+  transition:
+    transform 300ms ease-out,
+    box-shadow 300ms ease-out,
+    background-color 300ms ease-out,
+    color 300ms ease-out,
+    opacity 300ms ease-out;
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+  display: inline-block;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition:
+    background-color 300ms ease-out,
+    color 300ms ease-out,
+    transform 300ms ease-out;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Form inputs */
+.form-input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--primary);
+  transition: border-color 300ms ease-out;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-submit {
+  background: var(--accent);
+  color: #ffffff;
+  padding: 14px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border: none;
+  transition:
+    background-color 300ms ease-out,
+    transform 300ms ease-out,
+    box-shadow 300ms ease-out;
+}
+
+.btn-submit:hover {
+  background: var(--accent-hover);
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(231, 76, 60, 0.35);
+}
+
+/* Savoir-faire cards */
+.sf-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition:
+    transform 300ms ease-out,
+    box-shadow 300ms ease-out;
+}
+
+.sf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(26, 46, 74, 0.12);
+}
+
+.sf-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 20px;
+}
+
+.sf-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 12px;
+}
+
+/* Portfolio hover overlay */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 400 / 300;
+  width: 100%;
+  cursor: pointer;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 46, 74, 0.7);
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+  padding: 16px;
+}
+
+.portfolio-card:hover .portfolio-overlay,
+.portfolio-card:focus-visible .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  transform: translateY(8px);
+  transition: transform 300ms ease-out;
+}
+
+.portfolio-card:hover .portfolio-overlay span,
+.portfolio-card:focus-visible .portfolio-overlay span {
+  transform: translateY(0);
 }

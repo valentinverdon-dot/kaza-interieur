@@ -11,9 +11,9 @@ export default function ContactForm({
   dark = false,
   horizontal = false,
 }: ContactFormProps) {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -22,14 +22,50 @@ export default function ContactForm({
     const phone = String(data.get("phone") ?? "");
     const message = String(data.get("message") ?? "");
 
-    const subject = encodeURIComponent(`Demande de devis – ${name}`);
-    const phoneLine = phone ? `\nTéléphone : ${phone}` : "";
-    const body = encodeURIComponent(
-      `Nom : ${name}\nEmail : ${email}${phoneLine}\n\nMessage :\n${message}`,
-    );
-    window.location.href = `mailto:valentinverdon@gmail.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, message }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
+
+  const statusMessage = () => {
+    if (status === "sending") {
+      return (
+        <p className={`text-sm ${dark ? "text-white/80" : "text-gray-600"}`}>
+          Envoi en cours...
+        </p>
+      );
+    }
+    if (status === "success") {
+      return (
+        <p className="text-sm font-medium text-green-600">
+          ✓ Votre demande a bien été envoyée. Je vous recontacte sous 24h.
+        </p>
+      );
+    }
+    if (status === "error") {
+      return (
+        <p className="text-sm font-medium text-red-600">
+          Une erreur est survenue. Merci de réessayer ou de m&apos;appeler directement au 06 20 40 03 72.
+        </p>
+      );
+    }
+    return null;
+  };
 
   if (horizontal) {
     return (
@@ -75,17 +111,11 @@ export default function ContactForm({
           />
         </div>
         <div className="mt-5 text-center">
-          <button type="submit" className="btn-submit">
-            DEMANDER UN DEVIS
+          <button type="submit" disabled={status === "sending"} className="btn-submit">
+            {status === "sending" ? "ENVOI..." : "DEMANDER UN DEVIS"}
           </button>
         </div>
-        {submitted && (
-          <p
-            className={`mt-4 text-center text-sm ${dark ? "text-white/80" : "text-gray-600"}`}
-          >
-            Votre client mail va s&apos;ouvrir pour envoyer la demande.
-          </p>
-        )}
+        {status !== "idle" && <div className="mt-4 text-center">{statusMessage()}</div>}
       </form>
     );
   }
@@ -142,14 +172,10 @@ export default function ContactForm({
           className="form-input form-textarea"
         />
       </div>
-      <button type="submit" className="btn-submit w-full sm:w-auto">
-        DEMANDER UN DEVIS
+      <button type="submit" disabled={status === "sending"} className="btn-submit w-full sm:w-auto">
+        {status === "sending" ? "ENVOI..." : "DEMANDER UN DEVIS"}
       </button>
-      {submitted && (
-        <p className={`text-sm ${dark ? "text-white/80" : "text-gray-600"}`}>
-          Votre client mail va s&apos;ouvrir pour envoyer la demande.
-        </p>
-      )}
+      {status !== "idle" && statusMessage()}
     </form>
   );
 }

@@ -34,7 +34,7 @@ export async function GET() {
   <url>
     <loc>https://www.kaza-interieur.fr/faq</loc>
     <lastmod>2026-08-10</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>

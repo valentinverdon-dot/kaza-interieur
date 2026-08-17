@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/components/SavoirFaire";
 import FadeIn from "@/components/FadeIn";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Services",
   description:
     "Cuisine, parquet et aménagement intérieur — les prestations Kaza sur la Côte Basque.",
-};
+  path: "/services",
+});
 
 const serviceImages: Record<
   string,

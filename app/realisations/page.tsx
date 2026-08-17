@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import ProjectCuisine from "@/components/ProjectCuisine";
 import ProjectParquet from "@/components/ProjectParquet";
 import ProjectAmenagement from "@/components/ProjectAmenagement";
 import FadeIn from "@/components/FadeIn";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Nos réalisations",
   description:
     "Retrouvez l'ensemble des projets d'aménagement intérieur réalisés par Kaza sur la Côte Basque — cuisine, parquet et aménagement.",
-};
+  path: "/realisations",
+});
 
 export default function RealisationsPage() {
   return (

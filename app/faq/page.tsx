@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import FAQ from "@/components/FAQ";
 import { allFaqs } from "@/lib/faq";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Foire aux questions",
   description:
     "Retrouvez toutes les réponses à vos questions sur mes prestations d'aménagement intérieur — cuisine, parquet et aménagement sur la Côte Basque.",
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (

@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "À propos",
   description:
     "Valentin Verdon, poseur spécialisé en aménagement intérieur depuis 2020 — cuisine, parquet et aménagement sur la Côte Basque.",
-};
+  path: "/a-propos",
+});
 
 export default function AProposPage() {
   return (

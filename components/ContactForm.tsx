@@ -21,6 +21,7 @@ export default function ContactForm({
     const email = String(data.get("email") ?? "");
     const phone = String(data.get("phone") ?? "");
     const message = String(data.get("message") ?? "");
+    const website = String(data.get("website") ?? "");
 
     setStatus("sending");
 
@@ -28,7 +29,7 @@ export default function ContactForm({
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, message }),
+        body: JSON.stringify({ name, email, phone, message, website }),
       });
 
       if (res.ok) {
@@ -70,6 +71,16 @@ export default function ContactForm({
   if (horizontal) {
     return (
       <form onSubmit={handleSubmit} className="mx-auto w-full max-w-3xl">
+        <div className="sr-only" aria-hidden="true">
+          <label htmlFor="cta-website">Site internet</label>
+          <input
+            id="cta-website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
         <div className="flex flex-col gap-4 lg:flex-row">
           <div className="flex-1">
             <label htmlFor="cta-name" className="sr-only">
@@ -80,6 +91,8 @@ export default function ContactForm({
               name="name"
               type="text"
               required
+              minLength={2}
+              maxLength={100}
               placeholder="Nom"
               className="form-input"
             />
@@ -93,6 +106,7 @@ export default function ContactForm({
               name="email"
               type="email"
               required
+              maxLength={254}
               placeholder="Email"
               className="form-input"
             />
@@ -106,6 +120,8 @@ export default function ContactForm({
             id="cta-message"
             name="message"
             required
+            minLength={10}
+            maxLength={5000}
             placeholder="Décrivez votre projet, type de travaux..."
             className="form-input form-textarea"
           />
@@ -115,13 +131,29 @@ export default function ContactForm({
             {status === "sending" ? "ENVOI..." : "DEMANDER UN DEVIS"}
           </button>
         </div>
-        {status !== "idle" && <div className="mt-4 text-center">{statusMessage()}</div>}
+        <div
+          className={status === "idle" ? "" : "mt-4 text-center"}
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          {statusMessage()}
+        </div>
       </form>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="sr-only" aria-hidden="true">
+        <label htmlFor="website">Site internet</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <div>
         <label htmlFor="name" className="sr-only">
           Nom
@@ -131,6 +163,8 @@ export default function ContactForm({
           name="name"
           type="text"
           required
+          minLength={2}
+          maxLength={100}
           placeholder="Nom"
           className="form-input"
         />
@@ -144,6 +178,7 @@ export default function ContactForm({
           name="email"
           type="email"
           required
+          maxLength={254}
           placeholder="Email"
           className="form-input"
         />
@@ -156,6 +191,7 @@ export default function ContactForm({
           id="phone"
           name="phone"
           type="tel"
+          maxLength={30}
           placeholder="Votre téléphone"
           className="form-input"
         />
@@ -166,16 +202,20 @@ export default function ContactForm({
         </label>
         <textarea
           id="message"
-          name="message"
-          required
-          placeholder="Décrivez votre projet, type de travaux..."
+        name="message"
+        required
+        minLength={10}
+        maxLength={5000}
+        placeholder="Décrivez votre projet, type de travaux..."
           className="form-input form-textarea"
         />
       </div>
       <button type="submit" disabled={status === "sending"} className="btn-submit w-full sm:w-auto">
         {status === "sending" ? "ENVOI..." : "DEMANDER UN DEVIS"}
       </button>
-      {status !== "idle" && statusMessage()}
+      <div aria-live="polite" aria-atomic="true">
+        {statusMessage()}
+      </div>
     </form>
   );
 }

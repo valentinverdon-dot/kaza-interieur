@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Contact",
   description:
     "Contactez Valentin Verdon – Kaza à Anglet pour un devis cuisine, parquet ou aménagement intérieur.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -44,10 +45,10 @@ export default function ContactPage() {
                 <li>
                   <span className="font-semibold text-primary">Email :</span>{" "}
                   <a
-                    href="mailto:valentinverdon@gmail.com"
+                    href="mailto:valentin@kaza-interieur.fr"
                     className="text-accent hover:underline"
                   >
-                    valentinverdon@gmail.com
+                    valentin@kaza-interieur.fr
                   </a>
                 </li>
                 <li>

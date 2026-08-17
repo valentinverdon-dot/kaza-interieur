@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Mentions légales",
   description:
     "Mentions légales du site Kaza — Valentin Verdon, aménagement intérieur Côte Basque.",
-};
+  path: "/mentions-legales",
+});
 
 export default function MentionsLegalesPage() {
   return (
@@ -31,10 +32,10 @@ export default function MentionsLegalesPage() {
             <br />
             Email :{" "}
             <a
-              href="mailto:valentinverdon@gmail.com"
+              href="mailto:valentin@kaza-interieur.fr"
               className="text-[#1a2e4a] underline underline-offset-2 hover:text-[#e74c3c]"
             >
-              valentinverdon@gmail.com
+              valentin@kaza-interieur.fr
             </a>
           </p>
         </section>
@@ -124,10 +125,10 @@ export default function MentionsLegalesPage() {
           <p className="text-base leading-[1.7] text-[#333]">
             Pour toute question relative au site :{" "}
             <a
-              href="mailto:valentinverdon@gmail.com"
+              href="mailto:valentin@kaza-interieur.fr"
               className="text-[#1a2e4a] underline underline-offset-2 hover:text-[#e74c3c]"
             >
-              valentinverdon@gmail.com
+              valentin@kaza-interieur.fr
             </a>
           </p>
         </section>

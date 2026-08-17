@@ -5,10 +5,12 @@ import Approche from "@/components/Approche";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
+import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 
 export default function Home() {
   return (
     <>
+      <LocalBusinessJsonLd />
       <Hero />
       <SavoirFaire showLink />
       <Portfolio

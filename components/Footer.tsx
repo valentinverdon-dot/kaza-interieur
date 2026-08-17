@@ -128,10 +128,10 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="mailto:valentinverdon@gmail.com"
+                href="mailto:valentin@kaza-interieur.fr"
                 className="text-[#444] transition-colors hover:text-[#1a2e4a]"
               >
-                valentinverdon@gmail.com
+                valentin@kaza-interieur.fr
               </a>
             </li>
           </ul>

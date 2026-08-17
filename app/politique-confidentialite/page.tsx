@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Politique de confidentialité",
   description:
     "Politique de confidentialité et protection des données personnelles — Kaza, Valentin Verdon.",
-};
+  path: "/politique-confidentialite",
+});
 
 export default function PolitiqueConfidentialitePage() {
   return (
@@ -25,10 +26,10 @@ export default function PolitiqueConfidentialitePage() {
             <br />
             Email :{" "}
             <a
-              href="mailto:valentinverdon@gmail.com"
+              href="mailto:valentin@kaza-interieur.fr"
               className="text-[#1a2e4a] underline underline-offset-2 hover:text-[#e74c3c]"
             >
-              valentinverdon@gmail.com
+              valentin@kaza-interieur.fr
             </a>
           </p>
         </section>
@@ -107,10 +108,10 @@ export default function PolitiqueConfidentialitePage() {
           <p className="mt-4 text-base leading-[1.7] text-[#333]">
             Pour exercer ces droits, contactez :{" "}
             <a
-              href="mailto:valentinverdon@gmail.com"
+              href="mailto:valentin@kaza-interieur.fr"
               className="text-[#1a2e4a] underline underline-offset-2 hover:text-[#e74c3c]"
             >
-              valentinverdon@gmail.com
+              valentin@kaza-interieur.fr
             </a>
           </p>
           <p className="mt-4 text-base leading-[1.7] text-[#333]">

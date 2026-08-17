@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/site-config";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,12 +11,31 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Kaza — Aménagement intérieur Côte Basque",
     template: "%s | Kaza",
   },
   description:
     "Depuis 2020, Valentin Verdon (Kaza) réalise cuisine, parquet et aménagement intérieur pour des résidences de la Côte Basque. Qualité, discrétion, respect des délais.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Kaza — Aménagement intérieur Côte Basque",
+    description:
+      "Depuis 2020, Valentin Verdon (Kaza) réalise cuisine, parquet et aménagement intérieur pour des résidences de la Côte Basque. Qualité, discrétion, respect des délais.",
+    url: SITE_URL,
+    siteName: "Kaza Intérieur",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Kaza — Aménagement intérieur Côte Basque",
+    description:
+      "Depuis 2020, Valentin Verdon (Kaza) réalise cuisine, parquet et aménagement intérieur pour des résidences de la Côte Basque.",
+  },
   keywords: [
     "rénovation",
     "aménagement intérieur",

@@ -12,12 +12,13 @@ export default function Hero() {
           </h1>
           <div className="mt-5 max-w-xl space-y-5">
             <p className="body-text">
-              Transformez votre intérieur avec un professionnel qui comprend vos
-              besoins.
+              Transformez votre intérieur avec un professionnel basé à
+              Anglet, intervenant à Biarritz, Bayonne et dans les communes
+              alentour.
             </p>
             <p className="body-text">
-              Cuisine, parquet, aménagements, réalisés avec passion et rigueur
-              depuis 2020.
+              Cuisine, parquet et aménagement intérieur : des projets réalisés
+              avec passion et rigueur depuis 2020.
             </p>
             <p className="body-text">
               Mes clients apprécient mon sérieux, ma discrétion et ma capacité à

@@ -13,18 +13,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Kaza — Aménagement intérieur Côte Basque",
+    default: "Cuisine, parquet et aménagement intérieur au Pays basque | Kaza",
     template: "%s | Kaza",
   },
   description:
-    "Depuis 2020, Valentin Verdon (Kaza) réalise cuisine, parquet et aménagement intérieur pour des résidences de la Côte Basque. Qualité, discrétion, respect des délais.",
+    "Kaza réalise vos projets de cuisine, parquet et aménagement intérieur à Anglet, Biarritz, Bayonne et au Pays basque.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Kaza — Aménagement intérieur Côte Basque",
+    title: "Cuisine, parquet et aménagement intérieur au Pays basque | Kaza",
     description:
-      "Depuis 2020, Valentin Verdon (Kaza) réalise cuisine, parquet et aménagement intérieur pour des résidences de la Côte Basque. Qualité, discrétion, respect des délais.",
+      "Kaza réalise vos projets de cuisine, parquet et aménagement intérieur à Anglet, Biarritz, Bayonne et au Pays basque.",
     url: SITE_URL,
     siteName: "Kaza Intérieur",
     locale: "fr_FR",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Kaza — Aménagement intérieur Côte Basque",
+    title: "Cuisine, parquet et aménagement intérieur au Pays basque | Kaza",
     description:
-      "Depuis 2020, Valentin Verdon (Kaza) réalise cuisine, parquet et aménagement intérieur pour des résidences de la Côte Basque.",
+      "Kaza réalise vos projets de cuisine, parquet et aménagement intérieur à Anglet, Biarritz, Bayonne et au Pays basque.",
   },
   keywords: [
     "rénovation",

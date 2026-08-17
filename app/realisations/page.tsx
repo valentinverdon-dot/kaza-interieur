@@ -6,9 +6,9 @@ import FadeIn from "@/components/FadeIn";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Nos réalisations",
+  title: "Réalisations cuisine, parquet et aménagement intérieur",
   description:
-    "Retrouvez l'ensemble des projets d'aménagement intérieur réalisés par Kaza sur la Côte Basque — cuisine, parquet et aménagement.",
+    "Découvrez les réalisations Kaza en cuisine, parquet et aménagement intérieur au Pays basque.",
   path: "/realisations",
 });
 
@@ -20,9 +20,9 @@ export default function RealisationsPage() {
           <FadeIn>
             <h1 className="heading-h1 mb-6 text-center">Nos réalisations</h1>
             <p className="body-text mx-auto max-w-2xl text-center text-gray-600">
-              Retrouvez quelques uns de nos projets d&apos;aménagement intérieur,
-              parquet et cuisine réalisés sur la Côte Basque - Anglet, Biarritz,
-              Bayonne et environs.
+              Découvrez quelques-uns de mes projets de cuisine, de parquet et
+              d&apos;aménagement intérieur réalisés à Anglet, Biarritz, Bayonne
+              et dans les communes alentour.
             </p>
           </FadeIn>
         </div>

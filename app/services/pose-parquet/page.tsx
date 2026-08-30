@@ -54,40 +54,40 @@ const steps = [
     number: "04",
     title: "Finitions",
     description:
-      "Pose des plinthes, finitions acryliques si prévues et contrôle final de l'ensemble du chantier.",
+      "Pose des plinthes, finitions acryliques et contrôle final de l’ensemble du chantier.",
   },
 ];
 
 const faqItems = [
   {
-    question: "Quel est le prix d'une pose de parquet ?",
+    question: "Quel est le prix d’une pose de parquet ?",
     answer:
-      "Le prix dépend du parquet, du type de pose, de l'état du support, de la surface, du nombre de pièces et des finitions. Un devis détaillé est établi après l'analyse du projet.",
+      "Le tarif dépend du type de parquet, de la méthode de pose, de l’état du sol existant, de la surface et des finitions demandées. Un devis clair et détaillé est établi après l’analyse de votre projet.",
   },
   {
     question: "Faut-il choisir une pose flottante ou collée ?",
     answer:
-      "La pose flottante est rapide et s'effectue sur une sous-couche adaptée. La pose collée offre un contact direct avec le support. Le choix dépend du parquet, du support et des contraintes de votre logement.",
+      "La pose flottante convient à de nombreux parquets contrecollés et sols stratifiés. La pose collée, souvent utilisée pour le parquet massif ou contrecollé, fixe directement les lames sur un sol préparé. Le choix dépend du parquet, du support et des contraintes de votre logement.",
   },
   {
     question: "La sous-couche acoustique est-elle nécessaire ?",
     answer:
-      "Elle est généralement prévue pour une pose flottante afin d'améliorer le confort acoustique et de répondre aux contraintes du support. Sa nature est choisie au cas par cas.",
+      "En pose flottante, une sous-couche est nécessaire, sauf lorsqu’elle est déjà intégrée au revêtement. Elle est choisie selon la nature du support et les besoins acoustiques du logement.",
   },
   {
     question: "Pouvez-vous poser les plinthes et réaliser les finitions ?",
     answer:
-      "Oui. La prestation peut inclure la découpe et la pose des plinthes ainsi que les finitions acryliques. Ces éléments sont précisés dans le devis.",
+      "Oui. La prestation comprend la découpe et la pose des plinthes ainsi que les finitions acryliques pour obtenir un résultat propre et uniforme.",
   },
   {
-    question: "Faut-il retirer l'ancien sol avant la pose ?",
+    question: "Faut-il retirer l’ancien sol avant la pose ?",
     answer:
-      "Cela dépend de sa nature, de son état, de sa planéité et des hauteurs disponibles. Le support est contrôlé avant de retenir la solution la plus adaptée.",
+      "Pas systématiquement. Certains revêtements peuvent être conservés s’ils sont stables, suffisamment plats et compatibles avec le nouveau parquet. L’état du sol et le passage sous les portes sont vérifiés avant de retenir la solution adaptée.",
   },
   {
     question: "Combien de temps dure un chantier de parquet ?",
     answer:
-      "La durée varie selon la surface, la configuration des pièces, la préparation nécessaire et les finitions. Un planning précis est communiqué avec le devis.",
+      "La durée dépend de la surface, du nombre de pièces, de la préparation nécessaire et des finitions. Le délai estimé et l’organisation du chantier sont précisés avant le début des travaux.",
   },
 ];
 
@@ -198,16 +198,69 @@ export default function PoseParquetPage() {
       </section>
 
       <section className="border-y border-gray-100 bg-secondary">
-        <div className="container-site grid gap-6 py-8 text-center sm:grid-cols-3">
+        <div className="container-site grid grid-cols-1 gap-6 py-8 text-center sm:grid-cols-2 lg:grid-cols-4">
           {[
             "Conseil adapté au support",
             "Protection du chantier",
             "Finitions contrôlées",
+            "RC Pro & décennale à jour",
           ].map((item) => (
             <p key={item} className="text-sm font-semibold text-primary">
               {item}
             </p>
           ))}
+        </div>
+      </section>
+
+      <section className="container-site section-pad">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+            Les revêtements
+          </p>
+          <h2 className="heading-h2 mt-3">Quel parquet choisir ?</h2>
+          <p className="body-text mt-5 text-gray-600">
+            Le bon revêtement dépend de l&apos;usage de la pièce, de votre budget,
+            du support existant et de l&apos;esthétique recherchée.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {parquetTypes.map((item) => (
+            <article key={item.title} className="rounded-lg bg-secondary p-8">
+              <h3 className="text-xl font-bold text-primary">{item.title}</h3>
+              <p className="body-text mt-4 text-gray-600">{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-pad bg-primary text-white">
+        <div className="container-site grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+              Pose flottante
+            </p>
+            <h2 className="mt-3 text-3xl font-bold">Rapide et polyvalente</h2>
+            <p className="body-text mt-5 !text-white">
+              Les lames sont assemblées entre elles sans être collées au sol.
+              Elles reposent sur une sous-couche adaptée au support et aux
+              besoins acoustiques du logement. Les découpes et les seuils sont
+              réalisés avec précision, tandis qu&apos;un espace est conservé en
+              périphérie afin de permettre au parquet de se dilater
+              naturellement.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+              Pose collée
+            </p>
+            <h2 className="mt-3 text-3xl font-bold">Une excellente tenue dans le temps</h2>
+            <p className="body-text mt-5 !text-white">
+              Le parquet est collé directement sur le sol, après avoir vérifié
+              qu&apos;il est propre, sec, stable et suffisamment plat. Cette
+              technique demande une préparation rigoureuse et crée une liaison
+              directe entre le sol et le parquet.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -268,55 +321,6 @@ export default function PoseParquetPage() {
       <section className="container-site section-pad">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-            Les revêtements
-          </p>
-          <h2 className="heading-h2 mt-3">Quel parquet choisir ?</h2>
-          <p className="body-text mt-5 text-gray-600">
-            Le bon revêtement dépend de l&apos;usage de la pièce, de votre budget,
-            du support existant et de l&apos;esthétique recherchée.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {parquetTypes.map((item) => (
-            <article key={item.title} className="rounded-lg bg-secondary p-8">
-              <h3 className="text-xl font-bold text-primary">{item.title}</h3>
-              <p className="body-text mt-4 text-gray-600">{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-pad bg-primary text-white">
-        <div className="container-site grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-              Pose flottante
-            </p>
-            <h2 className="mt-3 text-3xl font-bold">Rapide et polyvalente</h2>
-            <p className="body-text mt-5 text-gray-200">
-              Les lames sont assemblées sans être fixées au support. Une
-              sous-couche adaptée est installée pour le confort acoustique et la
-              protection du parquet. Les jeux de dilatation et les raccords sont
-              traités avec soin.
-            </p>
-          </div>
-          <div>
-            <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-              Pose collée
-            </p>
-            <h2 className="mt-3 text-3xl font-bold">Stable et confortable</h2>
-            <p className="body-text mt-5 text-gray-200">
-              Le parquet est directement collé sur un support sain, sec et
-              suffisamment plan. Cette technique demande une préparation
-              rigoureuse et crée une liaison directe entre le sol et le parquet.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="container-site section-pad">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
             Le déroulement
           </p>
           <h2 className="heading-h2 mt-3">Une pose préparée étape par étape</h2>
@@ -339,10 +343,10 @@ export default function PoseParquetPage() {
           <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
             <div>
               <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-                Réalisation locale
+                Pose flottante à Anglet
               </p>
               <h2 className="heading-h2 mt-3">
-                66 m² de parquet contrecollé posés à Anglet
+                Parquet contrecollé sur une surface de 66 m²
               </h2>
               <p className="body-text mt-5 max-w-3xl text-gray-600">
                 Pose flottante sur sous-couche acoustique dans le salon, le

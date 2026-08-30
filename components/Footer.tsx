@@ -98,6 +98,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm text-[#444]">
             <li>Lun - Ven · 8h - 19h</li>
             <li>Sur rendez-vous le week-end</li>
+            <li>Assurance RC Pro et décennale à jour</li>
             <li className="pt-1">
               <span className="block text-[#888]">Zone d&apos;intervention</span>
               <span className="mt-1 block">

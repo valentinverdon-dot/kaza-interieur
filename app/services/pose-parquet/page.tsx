@@ -211,6 +211,60 @@ export default function PoseParquetPage() {
         </div>
       </section>
 
+      <section className="section-pad bg-secondary">
+        <div className="container-site grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+              Pose collée à Biarritz
+            </p>
+            <h2 className="heading-h2 mt-3">
+              Parquet massif dans une chambre de 10 m²
+            </h2>
+            <p className="body-text mt-5 text-gray-600">
+              Ce chantier illustre les différentes étapes d&apos;une pose collée :
+              application régulière de la colle sur le support, mise en place
+              progressive des lames de parquet massif, respect des jeux
+              périphériques puis réalisation des finitions.
+            </p>
+            <p className="body-text mt-4 text-gray-600">
+              Le collage direct permet d&apos;obtenir un parquet stable et un rendu
+              chaleureux, ici adapté à la rénovation d&apos;une chambre à Biarritz.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <figure>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                <Image
+                  src="/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-en-cours.webp"
+                  alt="Pose collée de parquet massif en cours dans une chambre à Biarritz"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                  className="object-cover object-[center_48%]"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-gray-500">
+                Encollage du support et pose progressive des lames
+              </figcaption>
+            </figure>
+            <figure>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                <Image
+                  src="/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-chambre.webp"
+                  alt="Chambre de 10 mètres carrés avec parquet massif collé à Biarritz"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                  className="object-cover object-[center_42%]"
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-gray-500">
+                Résultat après la pose du parquet et des plinthes
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section className="container-site section-pad">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">

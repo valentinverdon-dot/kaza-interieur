@@ -42,6 +42,8 @@ const routes: MetadataRoute.Sitemap = [
       `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp`,
       `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-couloir.webp`,
       `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp`,
+      `${SITE_URL}/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-en-cours.webp`,
+      `${SITE_URL}/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-chambre.webp`,
     ],
   },
   {

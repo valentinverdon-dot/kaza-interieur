@@ -62,6 +62,16 @@ const routes: MetadataRoute.Sitemap = [
     ],
   },
   {
+    url: `${SITE_URL}/services/amenagement-interieur`,
+    lastModified: "2026-08-30",
+    images: [
+      `${SITE_URL}/services/service-amenagement.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_1.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_7.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_8.webp`,
+    ],
+  },
+  {
     url: `${SITE_URL}/realisations`,
     lastModified: "2026-08-30",
     images: projectImages,

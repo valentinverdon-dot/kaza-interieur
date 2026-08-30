@@ -94,6 +94,14 @@ export default function ServicesPage() {
                         Découvrir la pose de parquet
                       </Link>
                     )}
+                    {service.slug === "amenagement" && (
+                      <Link
+                        href="/services/amenagement-interieur"
+                        className="btn-outline inline-block px-6 py-3 text-sm font-bold tracking-wider"
+                      >
+                        Découvrir l’aménagement intérieur
+                      </Link>
+                    )}
                     <Link
                       href="/contact"
                       className="btn-cta inline-block bg-accent px-6 py-3 text-sm font-bold tracking-wider text-white"

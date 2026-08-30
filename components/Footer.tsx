@@ -5,6 +5,7 @@ const chezKazaLinks = [
   { href: "/services", label: "Services" },
   { href: "/services/pose-cuisine", label: "Pose de cuisine" },
   { href: "/services/pose-parquet", label: "Pose de parquet" },
+  { href: "/services/amenagement-interieur", label: "Aménagement intérieur" },
   { href: "/a-propos", label: "À propos" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },

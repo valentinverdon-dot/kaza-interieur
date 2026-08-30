@@ -73,7 +73,7 @@ export const savoirFaireCards: {
     description:
       "Dressings, placards, cloisons et aménagements intérieurs sur mesure pour optimiser chaque mètre carré de votre logement.",
     icon: DoorClosed,
-    href: "/services#amenagement",
+    href: "/services/amenagement-interieur",
     linkLabel: "Découvrir l'aménagement",
   },
 ];

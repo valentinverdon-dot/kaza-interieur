@@ -13,7 +13,8 @@ export const featuredProjects = [
   },
   {
     title: "Parquet",
-    image: "/projects/project-2-parquet/Parquet_3.jpeg",
+    image:
+      "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp",
     tone: "#5c4033",
   },
   {

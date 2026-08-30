@@ -14,6 +14,9 @@ const projectImages = [
     { length: 8 },
     (_, index) => `/projects/project-3-amenagement/Amenagement_${index + 1}.webp`,
   ),
+  "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp",
+  "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-couloir.webp",
+  "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp",
 ].map((image) => `${SITE_URL}${image}`);
 
 const routes: MetadataRoute.Sitemap = [
@@ -33,7 +36,7 @@ const routes: MetadataRoute.Sitemap = [
   },
   {
     url: `${SITE_URL}/realisations`,
-    lastModified: "2026-08-28",
+    lastModified: "2026-08-30",
     images: projectImages,
   },
   {

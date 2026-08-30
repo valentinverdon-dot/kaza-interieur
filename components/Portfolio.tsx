@@ -9,17 +9,20 @@ export const featuredProjects = [
   {
     title: "Cuisine",
     image: "/projects/project-1-cuisine/Cuisine_8.webp",
+    alt: "Cuisine blanche équipée posée par Kaza à Anglet",
     tone: "#1a2e4a",
   },
   {
     title: "Parquet",
     image:
       "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp",
+    alt: "Parquet contrecollé posé dans un salon à Anglet",
     tone: "#5c4033",
   },
   {
     title: "Aménagement",
     image: "/projects/project-3-amenagement/Amenagement_7.webp",
+    alt: "Escalier habillé de parquet et rénové par Kaza",
     tone: "#4a6741",
   },
 ];
@@ -74,7 +77,7 @@ export default function Portfolio({
                 <div className="portfolio-card">
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={project.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
@@ -135,11 +138,10 @@ export default function Portfolio({
             <div className="relative aspect-[16/10] w-full">
               <Image
                 src={selected.image}
-                alt={selected.title}
+                alt={selected.alt}
                 fill
                 sizes="(max-width: 768px) 100vw, 768px"
                 className="object-cover"
-                priority
               />
             </div>
             <div className="p-6">

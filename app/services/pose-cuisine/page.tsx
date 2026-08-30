@@ -204,7 +204,7 @@ export default function PoseCuisinePage() {
             src="/services/service-cuisine.webp"
             alt="Découpe d’un plan de travail pendant la pose d’une cuisine par Kaza"
             fill
-            priority
+            preload
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
           />

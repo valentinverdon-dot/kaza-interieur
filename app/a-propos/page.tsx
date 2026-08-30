@@ -27,7 +27,7 @@ export default function AProposPage() {
                 fill
                 className="object-cover"
                 sizes="300px"
-                priority
+                preload
               />
             </div>
           </FadeIn>

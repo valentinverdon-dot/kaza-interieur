@@ -190,7 +190,7 @@ export default function PoseParquetPage() {
             src="/services/service-parquet.webp"
             alt="Pose de parquet en bois par Kaza au Pays basque"
             fill
-            priority
+            preload
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
           />

@@ -166,7 +166,6 @@ export default function ProjectGallery({
               width={1600}
               height={1200}
               className="max-h-[90vh] w-auto max-w-[90vw] object-contain"
-              priority
             />
             <p className="mt-3 text-center text-sm text-white/80">
               {index + 1} / {images.length} — {current.alt}

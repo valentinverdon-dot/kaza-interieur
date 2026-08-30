@@ -1,7 +1,55 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { SITE_URL } from "@/lib/site-config";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1_000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+
+type RateLimitEntry = {
+  count: number;
+  resetAt: number;
+};
+
+const rateLimits = new Map<string, RateLimitEntry>();
+
+function getClientIp(headers: Headers): string | null {
+  const forwardedFor = headers.get("x-forwarded-for");
+  const firstForwardedIp = forwardedFor?.split(",")[0]?.trim();
+
+  return firstForwardedIp || headers.get("x-real-ip")?.trim() || null;
+}
+
+function checkRateLimit(ip: string | null): {
+  allowed: boolean;
+  retryAfterSeconds?: number;
+} {
+  if (!ip) return { allowed: true };
+
+  const now = Date.now();
+
+  if (rateLimits.size > 500) {
+    for (const [key, entry] of rateLimits) {
+      if (entry.resetAt <= now) rateLimits.delete(key);
+    }
+  }
+
+  const current = rateLimits.get(ip);
+  if (!current || current.resetAt <= now) {
+    rateLimits.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return { allowed: true };
+  }
+
+  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return {
+      allowed: false,
+      retryAfterSeconds: Math.max(1, Math.ceil((current.resetAt - now) / 1_000)),
+    };
+  }
+
+  current.count += 1;
+  return { allowed: true };
+}
 
 function escapeHtml(value: string): string {
   return value.replace(/[&<>'"]/g, (character) => {
@@ -23,6 +71,27 @@ function readField(value: unknown): string {
 
 export async function POST(request: Request) {
   try {
+    const origin = request.headers.get("origin");
+    const requestOrigin = new URL(request.url).origin;
+    const productionOrigin = new URL(SITE_URL).origin;
+
+    if (origin && origin !== requestOrigin && origin !== productionOrigin) {
+      return NextResponse.json({ error: "Origine invalide" }, { status: 403 });
+    }
+
+    const rateLimit = checkRateLimit(getClientIp(request.headers));
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Trop de demandes. Merci de réessayer plus tard." },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(rateLimit.retryAfterSeconds ?? 60),
+          },
+        }
+      );
+    }
+
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
       console.error("RESEND_API_KEY manquante");

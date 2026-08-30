@@ -5,6 +5,7 @@ export const metadata = createPageMetadata({
   description:
     "Politique de confidentialité et protection des données personnelles — Kaza, Valentin Verdon.",
   path: "/politique-confidentialite",
+  index: false,
 });
 
 export default function PolitiqueConfidentialitePage() {

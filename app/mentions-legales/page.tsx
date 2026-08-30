@@ -5,6 +5,7 @@ export const metadata = createPageMetadata({
   description:
     "Mentions légales du site Kaza — Valentin Verdon, aménagement intérieur Côte Basque.",
   path: "/mentions-legales",
+  index: false,
 });
 
 export default function MentionsLegalesPage() {

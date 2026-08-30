@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { SITE_URL } from "@/lib/site-config";
+import {
+  SITE_URL,
+  SOCIAL_IMAGE_ALT,
+  SOCIAL_IMAGE_URL,
+} from "@/lib/site-config";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,12 +33,21 @@ export const metadata: Metadata = {
     siteName: "Kaza Intérieur",
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: SOCIAL_IMAGE_URL,
+        width: 1200,
+        height: 630,
+        alt: SOCIAL_IMAGE_ALT,
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Cuisine, parquet et aménagement intérieur au Pays basque | Kaza",
     description:
       "Kaza réalise vos projets de cuisine, parquet et aménagement intérieur à Anglet, Biarritz, Bayonne et au Pays basque.",
+    images: [{ url: SOCIAL_IMAGE_URL, alt: SOCIAL_IMAGE_ALT }],
   },
   keywords: [
     "rénovation",

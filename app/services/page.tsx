@@ -13,25 +13,19 @@ export const metadata = createPageMetadata({
 
 const serviceImages: Record<
   string,
-  { src: string; alt: string; width: number; height: number }
+  { src: string; alt: string }
 > = {
   cuisine: {
     src: "/services/service-cuisine.webp",
     alt: "Pose et aménagement de cuisine sur mesure par Kaza",
-    width: 600,
-    height: 400,
   },
   parquet: {
     src: "/services/service-parquet.webp",
     alt: "Pose de parquet contrecollé par Kaza sur la Côte Basque",
-    width: 600,
-    height: 400,
   },
   amenagement: {
     src: "/services/service-amenagement.webp",
     alt: "Aménagement intérieur sur mesure par Kaza : dressings, placards, cloisons",
-    width: 600,
-    height: 400,
   },
 };
 
@@ -66,13 +60,15 @@ export default function ServicesPage() {
                   i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={image.width}
-                  height={image.height}
-                  className="h-auto max-h-[400px] w-full rounded-lg object-cover"
-                />
+                <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <h2 className="text-2xl font-bold text-primary">
                     {service.title}

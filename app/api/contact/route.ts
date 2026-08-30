@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function escapeHtml(value: string): string {
@@ -25,6 +23,16 @@ function readField(value: unknown): string {
 
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("RESEND_API_KEY manquante");
+      return NextResponse.json(
+        { error: "Service temporairement indisponible" },
+        { status: 503 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     const contentLength = Number(request.headers.get("content-length") ?? 0);
     if (contentLength > 20_000) {
       return NextResponse.json({ error: "Requête trop volumineuse" }, { status: 413 });

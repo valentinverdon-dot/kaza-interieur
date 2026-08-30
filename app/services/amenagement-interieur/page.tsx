@@ -374,7 +374,7 @@ export default function AmenagementInterieurPage() {
               afin de conserver une organisation et des finitions cohérentes.
             </p>
           </div>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-end">
+          <div className="flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center lg:justify-end">
             <Link
               href="/services/pose-parquet"
               className="inline-block bg-white px-6 py-3 text-center text-sm font-bold tracking-wider text-primary transition-colors hover:bg-secondary"

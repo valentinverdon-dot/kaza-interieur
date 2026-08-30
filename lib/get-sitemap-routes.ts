@@ -47,6 +47,18 @@ const routes: MetadataRoute.Sitemap = [
     ],
   },
   {
+    url: `${SITE_URL}/services/pose-cuisine`,
+    lastModified: "2026-08-30",
+    images: [
+      `${SITE_URL}/services/service-cuisine.webp`,
+      `${SITE_URL}/projects/project-1-cuisine/Cuisine_2.webp`,
+      `${SITE_URL}/projects/project-1-cuisine/Cuisine_3.webp`,
+      `${SITE_URL}/projects/project-1-cuisine/Cuisine_5.webp`,
+      `${SITE_URL}/projects/project-1-cuisine/Cuisine_7.webp`,
+      `${SITE_URL}/projects/project-1-cuisine/Cuisine_8.webp`,
+    ],
+  },
+  {
     url: `${SITE_URL}/realisations`,
     lastModified: "2026-08-30",
     images: projectImages,

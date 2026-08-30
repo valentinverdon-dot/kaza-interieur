@@ -57,7 +57,7 @@ export const savoirFaireCards: {
     description:
       "Pose et aménagement de cuisines sur mesure : plans de travail, rangements et crédences pour un espace fonctionnel et esthétique.",
     icon: KitchenFurnitureIcon,
-    href: "/services#cuisine",
+    href: "/services/pose-cuisine",
     linkLabel: "Découvrir la cuisine",
   },
   {

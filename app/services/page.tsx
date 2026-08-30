@@ -78,6 +78,14 @@ export default function ServicesPage() {
                     {service.longDescription}
                   </p>
                   <div className="mt-6 flex flex-wrap gap-4">
+                    {service.slug === "cuisine" && (
+                      <Link
+                        href="/services/pose-cuisine"
+                        className="btn-outline inline-block px-6 py-3 text-sm font-bold tracking-wider"
+                      >
+                        Découvrir la pose de cuisine
+                      </Link>
+                    )}
                     {service.slug === "parquet" && (
                       <Link
                         href="/services/pose-parquet"

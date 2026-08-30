@@ -15,6 +15,9 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  const isActive = (href: string) =>
+    pathname === href || (href === "/services" && pathname.startsWith("/services/"));
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
@@ -35,7 +38,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className={`text-xs font-semibold tracking-wider transition-colors hover:text-accent ${
-                pathname === link.href ? "text-accent" : "text-primary"
+                isActive(link.href) ? "text-accent" : "text-primary"
               }`}
             >
               {link.label}
@@ -89,7 +92,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`py-2 text-sm font-semibold tracking-wider ${
-                  pathname === link.href ? "text-accent" : "text-primary"
+                  isActive(link.href) ? "text-accent" : "text-primary"
                 }`}
                 onClick={() => setOpen(false)}
               >

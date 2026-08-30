@@ -6,6 +6,7 @@ type FadeInProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
+  id?: string;
   as?: "div" | "section" | "article" | "p" | "h1" | "h2" | "h3";
 };
 
@@ -13,6 +14,7 @@ export default function FadeIn({
   children,
   className = "",
   delay = 0,
+  id,
   as: Tag = "div",
 }: FadeInProps) {
   const ref = useRef<HTMLElement | null>(null);
@@ -39,6 +41,7 @@ export default function FadeIn({
   return (
     <Tag
       ref={ref as never}
+      id={id}
       className={`fade-in-el ${visible ? "is-visible" : ""} ${className}`}
       style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
     >

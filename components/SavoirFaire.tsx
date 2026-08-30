@@ -49,24 +49,32 @@ export const savoirFaireCards: {
   title: string;
   description: string;
   icon: LucideIcon | typeof KitchenFurnitureIcon;
+  href: string;
+  linkLabel: string;
 }[] = [
   {
     title: "Cuisine",
     description:
       "Pose et aménagement de cuisines sur mesure : plans de travail, rangements et crédences pour un espace fonctionnel et esthétique.",
     icon: KitchenFurnitureIcon,
+    href: "/services#cuisine",
+    linkLabel: "Découvrir la cuisine",
   },
   {
     title: "Parquet",
     description:
       "Pose de parquet massif, contrecollé ou stratifié. Pose collée ou flottante, selon votre support et vos usages.",
     icon: LayoutGrid,
+    href: "/services/pose-parquet",
+    linkLabel: "Découvrir la pose de parquet",
   },
   {
     title: "Aménagement",
     description:
       "Dressings, placards, cloisons et aménagements intérieurs sur mesure pour optimiser chaque mètre carré de votre logement.",
     icon: DoorClosed,
+    href: "/services#amenagement",
+    linkLabel: "Découvrir l'aménagement",
   },
 ];
 
@@ -133,6 +141,12 @@ export default function SavoirFaire({ showLink = false }: SavoirFaireProps) {
                   />
                   <h3>{card.title}</h3>
                   <p>{card.description}</p>
+                  <Link
+                    href={card.href}
+                    className="mt-5 inline-block text-sm font-bold text-accent transition-colors hover:text-primary"
+                  >
+                    {card.linkLabel} →
+                  </Link>
                 </div>
               </FadeIn>
             );

@@ -35,6 +35,16 @@ const routes: MetadataRoute.Sitemap = [
     ],
   },
   {
+    url: `${SITE_URL}/services/pose-parquet`,
+    lastModified: "2026-08-30",
+    images: [
+      `${SITE_URL}/services/service-parquet.webp`,
+      `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp`,
+      `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-couloir.webp`,
+      `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp`,
+    ],
+  },
+  {
     url: `${SITE_URL}/realisations`,
     lastModified: "2026-08-30",
     images: projectImages,

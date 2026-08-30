@@ -3,6 +3,7 @@ import Link from "next/link";
 const chezKazaLinks = [
   { href: "/realisations", label: "Réalisations" },
   { href: "/services", label: "Services" },
+  { href: "/services/pose-parquet", label: "Pose de parquet" },
   { href: "/a-propos", label: "À propos" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },

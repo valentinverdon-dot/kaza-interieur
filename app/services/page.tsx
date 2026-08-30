@@ -56,6 +56,7 @@ export default function ServicesPage() {
                 key={service.slug}
                 delay={i * 80}
                 as="article"
+                id={service.slug}
                 className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
                   i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
@@ -76,12 +77,22 @@ export default function ServicesPage() {
                   <p className="body-text mt-4 text-gray-600">
                     {service.longDescription}
                   </p>
-                  <Link
-                    href="/contact"
-                    className="btn-cta mt-6 inline-block bg-accent px-6 py-3 text-sm font-bold tracking-wider text-white"
-                  >
-                    Demander un devis
-                  </Link>
+                  <div className="mt-6 flex flex-wrap gap-4">
+                    {service.slug === "parquet" && (
+                      <Link
+                        href="/services/pose-parquet"
+                        className="btn-outline inline-block px-6 py-3 text-sm font-bold tracking-wider"
+                      >
+                        Découvrir la pose de parquet
+                      </Link>
+                    )}
+                    <Link
+                      href="/contact"
+                      className="btn-cta inline-block bg-accent px-6 py-3 text-sm font-bold tracking-wider text-white"
+                    >
+                      Demander un devis
+                    </Link>
+                  </div>
                 </div>
               </FadeIn>
             );

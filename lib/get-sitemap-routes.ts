@@ -56,6 +56,9 @@ const routes: MetadataRoute.Sitemap = [
       `${SITE_URL}/projects/project-1-cuisine/Cuisine_5.webp`,
       `${SITE_URL}/projects/project-1-cuisine/Cuisine_7.webp`,
       `${SITE_URL}/projects/project-1-cuisine/Cuisine_8.webp`,
+      `${SITE_URL}/projects/cuisine-noire-anglet/pose-cuisine-ixina-anglet.webp`,
+      `${SITE_URL}/projects/cuisine-noire-anglet/cuisine-noire-bois-ilot-anglet.webp`,
+      `${SITE_URL}/projects/cuisine-noire-anglet/installation-cuisine-equipee-anglet.webp`,
     ],
   },
   {

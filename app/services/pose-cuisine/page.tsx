@@ -27,7 +27,7 @@ const services = [
   {
     title: "Équipements",
     description:
-      "Mise en place de l’électroménager encastrable, de l’évier, de la robinetterie et des accessoires prévus au projet.",
+      "Intégration de l’électroménager, de l’évier, de la robinetterie et des accessoires, avec préparation des éléments avant les raccordements réalisés par les professionnels concernés.",
   },
   {
     title: "Finitions",
@@ -214,7 +214,7 @@ export default function PoseCuisinePage() {
       <section className="border-y border-gray-100 bg-secondary">
         <div className="container-site grid grid-cols-1 gap-6 py-8 text-center sm:grid-cols-2 lg:grid-cols-4">
           {[
-            "Cuisine achetée par vos soins",
+            "Votre cuisine, votre enseigne",
             "Préparation selon le projet",
             "Pose et finitions contrôlées",
             "RC Pro & décennale à jour",
@@ -244,6 +244,48 @@ export default function PoseCuisinePage() {
               <p className="body-text mt-4 text-gray-600">{item.description}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section-pad bg-secondary">
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+              Cuisines toutes enseignes
+            </p>
+            <h2 className="heading-h2 mt-3">
+              Votre cuisine, notre savoir-faire pour la pose
+            </h2>
+            <p className="body-text mt-5 text-gray-600">
+              Vous avez déjà commandé votre cuisine ? Kaza réalise son
+              installation à partir du plan fourni par votre cuisiniste, après
+              vérification des éléments commandés et des contraintes de la
+              pièce.
+            </p>
+          </div>
+          <div className="mt-12 flex flex-wrap justify-center gap-3">
+            {[
+              "IKEA",
+              "Ixina",
+              "Leroy Merlin",
+              "Castorama",
+              "SoCoo’c",
+              "Cuisinella",
+              "Autres enseignes",
+            ].map((brand) => (
+              <span
+                key={brand}
+                className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-primary"
+              >
+                {brand}
+              </span>
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-6 text-gray-500">
+            Enseignes citées à titre d’exemple. Kaza intervient comme
+            installateur indépendant, sans affiliation avec les marques
+            mentionnées.
+          </p>
         </div>
       </section>
 
@@ -355,13 +397,21 @@ export default function PoseCuisinePage() {
           <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
             <div>
               <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-                Réalisations cuisine
+                Pose de cuisine Ixina à Anglet
               </p>
-              <h2 className="heading-h2 mt-3">Des ajustements soignés pour chaque implantation</h2>
+              <h2 className="heading-h2 mt-3">
+                Cuisine noire et bois avec îlot central
+              </h2>
               <p className="body-text mt-5 max-w-3xl text-gray-600">
-                L’alignement des façades, l’intégration des appareils et les
-                découpes du plan de travail sont contrôlés pour obtenir un
-                résultat fonctionnel et homogène.
+                Ce chantier a débuté par la dépose de l’ancienne cuisine et la
+                pose d’un parquet contrecollé afin de préparer la pièce pour sa
+                nouvelle implantation.
+              </p>
+              <p className="body-text mt-4 max-w-3xl text-gray-600">
+                Kaza a ensuite assuré la pose des meubles Ixina, de l’îlot
+                central, de la crédence et l’intégration de l’électroménager,
+                jusqu’aux réglages, aux finitions et au nettoyage de fin de
+                chantier.
               </p>
             </div>
             <Link
@@ -375,30 +425,35 @@ export default function PoseCuisinePage() {
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {[
               {
-                src: "/projects/project-1-cuisine/Cuisine_3.webp",
-                alt: "Réglage des façades de meubles pendant une pose de cuisine à Anglet",
+                src: "/projects/cuisine-noire-anglet/pose-cuisine-ixina-anglet.webp",
+                alt: "Cuisine Ixina noire et bois posée par Kaza à Anglet",
+                caption: "Pose des meubles et du plan de travail",
               },
               {
-                src: "/projects/project-1-cuisine/Cuisine_5.webp",
-                alt: "Plan de travail et électroménager intégrés dans une cuisine à Anglet",
+                src: "/projects/cuisine-noire-anglet/cuisine-noire-bois-ilot-anglet.webp",
+                alt: "Cuisine noire et bois avec îlot central installée à Anglet",
+                caption: "Installation de l’îlot central",
               },
               {
-                src: "/projects/project-1-cuisine/Cuisine_8.webp",
-                alt: "Vue d’ensemble d’une cuisine blanche posée par Kaza à Anglet",
+                src: "/projects/cuisine-noire-anglet/installation-cuisine-equipee-anglet.webp",
+                alt: "Cuisine équipée Ixina après la pose et les finitions à Anglet",
+                caption: "Résultat après les finitions",
               },
             ].map((image) => (
-              <div
-                key={image.src}
-                className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-[center_52%]"
-                />
-              </div>
+              <figure key={image.src}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-[center_52%]"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-gray-500">
+                  {image.caption}
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>

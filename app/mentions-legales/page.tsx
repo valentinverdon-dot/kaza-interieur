@@ -114,8 +114,19 @@ export default function MentionsLegalesPage() {
             Conformément à l&apos;article L.612-1 du Code de la consommation,
             tout consommateur a le droit de recourir gratuitement à un médiateur
             de la consommation en vue de la résolution amiable d&apos;un litige.
-            Les coordonnées du médiateur compétent peuvent être communiquées sur
-            simple demande.
+            Après une réclamation écrite préalable restée sans solution, le
+            consommateur peut saisir le CM2C - Centre de la Médiation de la
+            Consommation de Conciliateurs de Justice, 49 rue de Ponthieu, 75008
+            Paris, par email à declarer-un-litige@cm2c.net ou sur le site :{" "}
+            <a
+              href="https://www.cm2c.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1a2e4a] underline underline-offset-2 hover:text-[#e74c3c]"
+            >
+              cm2c.net
+            </a>
+            .
           </p>
         </section>
 

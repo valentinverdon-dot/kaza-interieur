@@ -114,6 +114,15 @@ export default function Footer() {
               |
             </span>
             <Link
+              href="/conditions-generales"
+              className="transition-colors hover:text-[#1a2e4a]"
+            >
+              Conditions générales
+            </Link>
+            <span aria-hidden className="text-[#ccc]">
+              |
+            </span>
+            <Link
               href="/politique-confidentialite"
               className="transition-colors hover:text-[#1a2e4a]"
             >

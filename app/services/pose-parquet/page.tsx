@@ -346,7 +346,7 @@ export default function PoseParquetPage() {
                 Pose collée à Anglet
               </p>
               <h2 className="heading-h2 mt-3">
-                Parquet contrecollé sur une surface de 66 m²
+                Pose de parquet contrecollé à Anglet – 66 m²
               </h2>
               <p className="body-text mt-5 max-w-3xl text-gray-600">
                 Pose collée de parquet contrecollé sur sous-couche acoustique

@@ -16,7 +16,9 @@ export default function Header() {
   const pathname = usePathname();
 
   const isActive = (href: string) =>
-    pathname === href || (href === "/services" && pathname.startsWith("/services/"));
+    pathname === href ||
+    (href === "/services" && pathname.startsWith("/services/")) ||
+    (href === "/realisations" && pathname.startsWith("/realisations/"));
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">

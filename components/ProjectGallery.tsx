@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
@@ -17,6 +18,8 @@ type ProjectGalleryProps = {
   images: GalleryImage[];
   /** Desktop columns: 4 (cuisine) or 3 (parquet). Tablet stays 2, mobile 1. */
   columns?: 3 | 4;
+  href?: string;
+  meta?: string;
 };
 
 const gridColsClass: Record<3 | 4, string> = {
@@ -35,6 +38,8 @@ export default function ProjectGallery({
   galleryLabel = "Galerie du projet",
   images,
   columns = 4,
+  href,
+  meta,
 }: ProjectGalleryProps) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
@@ -83,8 +88,33 @@ export default function ProjectGallery({
     <section className="section-pad bg-white">
       <div className="container-site">
         <FadeIn>
-          <h2 className="heading-h2 !mb-5">{title}</h2>
-          <p className="body-text mb-10 max-w-3xl text-gray-700">{description}</p>
+          <h2 className="heading-h2 !mb-5">
+            {href ? (
+              <Link href={href} className="transition-colors hover:text-accent">
+                {title}
+              </Link>
+            ) : (
+              title
+            )}
+          </h2>
+          {meta ? (
+            <p className="mb-4 text-sm font-semibold tracking-wide text-accent">
+              {meta}
+            </p>
+          ) : null}
+          <p className={`body-text max-w-3xl text-gray-700 ${href ? "mb-4" : "mb-10"}`}>
+            {description}
+          </p>
+          {href ? (
+            <p className="mb-10">
+              <Link
+                href={href}
+                className="text-sm font-semibold text-primary underline underline-offset-4 transition-colors duration-300 ease-out hover:text-accent"
+              >
+                Voir le détail de cette réalisation
+              </Link>
+            </p>
+          ) : null}
           <p className="mb-5 text-sm font-medium tracking-wide text-gray-500 uppercase">
             {galleryLabel}
           </p>
@@ -93,29 +123,48 @@ export default function ProjectGallery({
         <div className={gridColsClass[columns]}>
           {images.map((image, i) => (
             <FadeIn key={image.src} delay={i * 80}>
-              <button
-                type="button"
-                onClick={() => openAt(i)}
-                className="group relative block w-full overflow-hidden rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
-                aria-label={`Agrandir ${image.alt}`}
-              >
-                <div className="relative h-[300px] w-full overflow-hidden">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes={imageSizes[columns]}
-                    className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-[rgba(26,46,74,0.45)] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100" />
-                </div>
-              </button>
+              {href ? (
+                <Link
+                  href={href}
+                  aria-label={image.alt}
+                  className="group relative block w-full overflow-hidden rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                >
+                  <div className="relative h-[300px] w-full overflow-hidden">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes={imageSizes[columns]}
+                      className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-[rgba(26,46,74,0.45)] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100" />
+                  </div>
+                </Link>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => openAt(i)}
+                  className="group relative block w-full overflow-hidden rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                  aria-label={`Agrandir ${image.alt}`}
+                >
+                  <div className="relative h-[300px] w-full overflow-hidden">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes={imageSizes[columns]}
+                      className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-[rgba(26,46,74,0.45)] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100" />
+                  </div>
+                </button>
+              )}
             </FadeIn>
           ))}
         </div>
       </div>
 
-      {open && (
+      {!href && open && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
           onClick={close}

@@ -11,15 +11,15 @@ const parquetImages = Array.from({ length: 6 }, (_, i) => {
 const parquetAngletImages = [
   {
     src: "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp",
-    alt: "Pose flottante de parquet contrecollé dans un salon à Anglet",
+    alt: "Parquet contrecollé posé dans un salon à Anglet",
   },
   {
     src: "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-couloir.webp",
-    alt: "Parquet contrecollé posé dans un couloir avec plinthes blanches à Anglet",
+    alt: "Pose de parquet contrecollé dans le couloir d'un logement à Anglet",
   },
   {
     src: "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp",
-    alt: "Parquet contrecollé et finitions de plinthes dans une chambre à Anglet",
+    alt: "Parquet contrecollé posé dans une chambre à Anglet",
   },
 ];
 
@@ -27,11 +27,13 @@ export default function ProjectParquet() {
   return (
     <>
       <ProjectGallery
-        title="Pose flottante de parquet contrecollé à Anglet — 66 m²"
-        description="Pose de 66 m² de parquet contrecollé en pose flottante dans un appartement à Anglet, sur sous-couche acoustique. Pose des plinthes blanches et réalisation des finitions au joint acrylique pour un raccord net avec les murs."
+        title="Pose de parquet contrecollé à Anglet"
+        meta="66 m² · Pose collée"
+        description="Kaza Intérieur a réalisé à Anglet la pose collée de 66 m² de parquet contrecollé, répartis entre le salon-séjour et deux chambres. Le chantier comprenait une sous-couche acoustique compatible avec une pose collée, ainsi que la pose des plinthes et les finitions périphériques."
         galleryLabel="Galerie du projet à Anglet"
         images={parquetAngletImages}
         columns={3}
+        href="/realisations/pose-parquet-contrecolle-anglet"
       />
       <ProjectGallery
         title="Pose de parquet contrecollé"

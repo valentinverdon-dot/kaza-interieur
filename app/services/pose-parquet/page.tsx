@@ -343,22 +343,23 @@ export default function PoseParquetPage() {
           <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
             <div>
               <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-                Pose flottante à Anglet
+                Pose collée à Anglet
               </p>
               <h2 className="heading-h2 mt-3">
                 Parquet contrecollé sur une surface de 66 m²
               </h2>
               <p className="body-text mt-5 max-w-3xl text-gray-600">
-                Pose flottante sur sous-couche acoustique dans le salon, le
-                couloir et les chambres. Le chantier comprend également les
-                plinthes et leurs finitions acryliques.
+                Pose collée de parquet contrecollé sur sous-couche acoustique
+                dans le salon-séjour, le couloir et les deux chambres. Le
+                chantier comprend également la pose des plinthes et les
+                finitions périphériques.
               </p>
             </div>
             <Link
-              href="/realisations"
+              href="/realisations/pose-parquet-contrecolle-anglet"
               className="btn-outline inline-block px-6 py-3 text-sm font-bold tracking-wider"
             >
-              Voir toutes les réalisations
+              Voir cette réalisation
             </Link>
           </div>
 
@@ -370,11 +371,11 @@ export default function PoseParquetPage() {
               },
               {
                 src: "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-couloir.webp",
-                alt: "Pose flottante de parquet contrecollé dans un couloir à Anglet",
+                alt: "Pose de parquet contrecollé dans le couloir d'un logement à Anglet",
               },
               {
                 src: "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp",
-                alt: "Parquet contrecollé avec plinthes dans une chambre à Anglet",
+                alt: "Parquet contrecollé posé dans une chambre à Anglet",
               },
             ].map((image) => (
               <div

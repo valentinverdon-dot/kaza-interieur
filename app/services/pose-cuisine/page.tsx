@@ -320,55 +320,134 @@ export default function PoseCuisinePage() {
       </section>
 
       <section className="section-pad bg-secondary">
-        <div className="container-site grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <div>
+        <div className="container-site">
+          <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-              Rénovation de cuisine à Anglet
+              Nos réalisations
             </p>
-            <h2 className="heading-h2 mt-3">De la préparation à la pose des équipements</h2>
+            <h2 className="heading-h2 mt-3">Deux cuisines installées à Anglet</h2>
             <p className="body-text mt-5 text-gray-600">
-              Ce chantier comprend la dépose de l’ancienne cuisine, la
-              préparation de la pièce, la rénovation des murs et du sol puis la
-              pose d’une nouvelle cuisine achetée par le client.
-            </p>
-            <p className="body-text mt-4 text-gray-600">
-              Les meubles, le plan de travail, l’évier et l’électroménager ont
-              été intégrés selon le plan d’implantation, avec une attention
-              particulière portée aux alignements, aux découpes et aux
-              finitions.
+              Deux projets de pose de cuisine réalisés à Anglet, avec des
+              configurations et des finitions différentes.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            <figure>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
-                <Image
-                  src="/projects/project-1-cuisine/Cuisine_2.webp"
-                  alt="Montage des meubles pendant la rénovation d’une cuisine à Anglet"
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
-                  className="object-cover object-[center_52%]"
-                />
-              </div>
-              <figcaption className="mt-3 text-sm text-gray-500">
-                Montage, fixation et alignement des meubles
-              </figcaption>
-            </figure>
-            <figure>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
-                <Image
-                  src="/projects/project-1-cuisine/Cuisine_7.webp"
-                  alt="Cuisine blanche rénovée et installée par Kaza à Anglet"
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
-                  className="object-cover object-[center_52%]"
-                />
-              </div>
-              <figcaption className="mt-3 text-sm text-gray-500">
-                Résultat après la pose des équipements et des finitions
-              </figcaption>
-            </figure>
-          </div>
+          <article className="mt-12 grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+            <div>
+              <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+                Cuisine IKEA
+              </p>
+              <h3 className="mt-3 text-2xl font-bold text-primary lg:text-3xl">
+                Pose d’une cuisine IKEA à Anglet
+              </h3>
+              <p className="body-text mt-5 text-gray-600">
+                Ce chantier a débuté par la dépose de l’ancienne cuisine, la
+                préparation des supports et la peinture, avant l’installation
+                de la nouvelle cuisine IKEA en L.
+              </p>
+              <p className="body-text mt-4 text-gray-600">
+                Kaza a ensuite assuré le montage des caissons, la pose et le
+                réglage des meubles, la pose du plan de travail et de la
+                crédence, ainsi que l’intégration de l’électroménager, de
+                l’évier et du mitigeur, jusqu’aux finitions.
+              </p>
+              <Link
+                href="/realisations/pose-cuisine-ikea-anglet"
+                className="btn-outline mt-8 inline-block px-6 py-3 text-sm font-bold tracking-wider"
+              >
+                Voir cette réalisation
+              </Link>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <figure>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                  <Image
+                    src="/projects/project-1-cuisine/Cuisine_2.webp"
+                    alt="Montage des meubles d’une cuisine IKEA à Anglet"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                    className="object-cover object-[center_52%]"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-gray-500">
+                  Montage, fixation et alignement des meubles
+                </figcaption>
+              </figure>
+              <figure>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                  <Image
+                    src="/projects/project-1-cuisine/Cuisine_7.webp"
+                    alt="Cuisine IKEA en L après installation à Anglet"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                    className="object-cover object-[center_52%]"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-gray-500">
+                  Résultat après la pose des équipements et des finitions
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article className="mt-14 grid items-center gap-10 border-t border-gray-200 pt-14 lg:mt-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:pt-16">
+            <div className="lg:order-2">
+              <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
+                Cuisine Ixina
+              </p>
+              <h3 className="mt-3 text-2xl font-bold text-primary lg:text-3xl">
+                Pose d’une cuisine Ixina avec îlot à Anglet
+              </h3>
+              <p className="body-text mt-5 text-gray-600">
+                Dans cette maison neuve à Anglet, Kaza Intérieur a assuré
+                l’installation d’une cuisine Ixina noire et bois avec îlot
+                central, ainsi que la pose du parquet contrecollé.
+              </p>
+              <p className="body-text mt-4 text-gray-600">
+                L’intervention comprenait l’assemblage et la pose des meubles,
+                le plan de travail, les crédences, l’intégration des
+                équipements, jusqu’aux réglages et aux finitions.
+              </p>
+              <Link
+                href="/realisations/pose-cuisine-ixina-anglet"
+                className="btn-outline mt-8 inline-block px-6 py-3 text-sm font-bold tracking-wider"
+              >
+                Voir cette réalisation
+              </Link>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:order-1">
+              <figure>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                  <Image
+                    src="/projects/cuisine-noire-anglet/pose-cuisine-ixina-anglet.webp"
+                    alt="Cuisine Ixina noire et bois posée par Kaza à Anglet"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                    className="object-cover object-[center_52%]"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-gray-500">
+                  Pose des meubles et du plan de travail
+                </figcaption>
+              </figure>
+              <figure>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                  <Image
+                    src="/projects/cuisine-noire-anglet/cuisine-noire-bois-ilot-anglet.webp"
+                    alt="Cuisine noire et bois avec îlot central installée à Anglet"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                    className="object-cover object-[center_52%]"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-gray-500">
+                  Installation de l’îlot central
+                </figcaption>
+              </figure>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -389,73 +468,6 @@ export default function PoseCuisinePage() {
               </p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="section-pad bg-secondary">
-        <div className="container-site">
-          <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
-            <div>
-              <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-                Pose de cuisine Ixina à Anglet
-              </p>
-              <h2 className="heading-h2 mt-3">
-                Cuisine noire et bois avec îlot central
-              </h2>
-              <p className="body-text mt-5 max-w-3xl text-gray-600">
-                Ce chantier a débuté par la dépose de l’ancienne cuisine et la
-                pose d’un parquet contrecollé afin de préparer la pièce pour sa
-                nouvelle implantation.
-              </p>
-              <p className="body-text mt-4 max-w-3xl text-gray-600">
-                Kaza a ensuite assuré la pose des meubles Ixina, de l’îlot
-                central, de la crédence et l’intégration de l’électroménager,
-                jusqu’aux réglages, aux finitions et au nettoyage de fin de
-                chantier.
-              </p>
-            </div>
-            <Link
-              href="/realisations"
-              className="btn-outline inline-block px-6 py-3 text-sm font-bold tracking-wider"
-            >
-              Voir toutes les réalisations
-            </Link>
-          </div>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            {[
-              {
-                src: "/projects/cuisine-noire-anglet/pose-cuisine-ixina-anglet.webp",
-                alt: "Cuisine Ixina noire et bois posée par Kaza à Anglet",
-                caption: "Pose des meubles et du plan de travail",
-              },
-              {
-                src: "/projects/cuisine-noire-anglet/cuisine-noire-bois-ilot-anglet.webp",
-                alt: "Cuisine noire et bois avec îlot central installée à Anglet",
-                caption: "Installation de l’îlot central",
-              },
-              {
-                src: "/projects/cuisine-noire-anglet/installation-cuisine-equipee-anglet.webp",
-                alt: "Cuisine équipée Ixina après la pose et les finitions à Anglet",
-                caption: "Résultat après les finitions",
-              },
-            ].map((image) => (
-              <figure key={image.src}>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-[center_52%]"
-                  />
-                </div>
-                <figcaption className="mt-3 text-sm text-gray-500">
-                  {image.caption}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
         </div>
       </section>
 

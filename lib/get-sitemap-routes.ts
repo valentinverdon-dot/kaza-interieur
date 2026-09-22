@@ -19,6 +19,9 @@ const projectImages = [
   "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp",
   "/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-chambre.webp",
   "/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-en-cours.webp",
+  "/projects/cuisine-noire-anglet/pose-cuisine-ixina-anglet.webp",
+  "/projects/cuisine-noire-anglet/cuisine-noire-bois-ilot-anglet.webp",
+  "/projects/cuisine-noire-anglet/installation-cuisine-equipee-anglet.webp",
 ].map((image) => `${SITE_URL}${image}`);
 
 const routes: MetadataRoute.Sitemap = [
@@ -50,7 +53,7 @@ const routes: MetadataRoute.Sitemap = [
   },
   {
     url: `${SITE_URL}/services/pose-cuisine`,
-    lastModified: "2026-08-30",
+    lastModified: "2026-09-22",
     images: [
       `${SITE_URL}/services/service-cuisine.webp`,
       `${SITE_URL}/projects/project-1-cuisine/Cuisine_2.webp`,
@@ -93,6 +96,24 @@ const routes: MetadataRoute.Sitemap = [
     images: [
       `${SITE_URL}/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-chambre.webp`,
       `${SITE_URL}/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-en-cours.webp`,
+    ],
+  },
+  {
+    url: `${SITE_URL}/realisations/pose-cuisine-ikea-anglet`,
+    lastModified: "2026-09-22",
+    images: [
+      `${SITE_URL}/projects/project-1-cuisine/Cuisine_8.webp`,
+      `${SITE_URL}/projects/project-1-cuisine/Cuisine_5.webp`,
+      `${SITE_URL}/projects/project-1-cuisine/Cuisine_2.webp`,
+    ],
+  },
+  {
+    url: `${SITE_URL}/realisations/pose-cuisine-ixina-anglet`,
+    lastModified: "2026-09-22",
+    images: [
+      `${SITE_URL}/projects/cuisine-noire-anglet/pose-cuisine-ixina-anglet.webp`,
+      `${SITE_URL}/projects/cuisine-noire-anglet/cuisine-noire-bois-ilot-anglet.webp`,
+      `${SITE_URL}/projects/cuisine-noire-anglet/installation-cuisine-equipee-anglet.webp`,
     ],
   },
   {

@@ -1,21 +1,30 @@
 import ProjectGallery from "@/components/ProjectGallery";
 
-const amenagementImages = Array.from({ length: 8 }, (_, i) => {
-  const n = i + 1;
-  return {
-    src: `/projects/project-3-amenagement/Amenagement_${n}.webp`,
-    alt: `Habillage complet d'un escalier — photo ${n}`,
-  };
-});
+const amenagementBayonneImages = [
+  {
+    src: "/projects/project-3-amenagement/Amenagement_7.webp",
+    alt: "Aménagement d'escalier sur mesure dans une maison à Bayonne",
+  },
+  {
+    src: "/projects/project-3-amenagement/Amenagement_6.webp",
+    alt: "Escalier aménagé dans un volume réduit à Bayonne",
+  },
+  {
+    src: "/projects/project-3-amenagement/Amenagement_5.webp",
+    alt: "Marches en bois d'un palier quart-tournant à Bayonne",
+  },
+];
 
 export default function ProjectAmenagement() {
   return (
     <ProjectGallery
-      title="Habillage complet d'un escalier"
-      description="Habillage complet d'un escalier. Pose de parquet sur les marches, nez de marche protégés en aluminium, plinthes blanches et mise en peinture des contremarches. Un escalier rénové, sûr et esthétique."
-      galleryLabel="Galerie du projet"
-      images={amenagementImages}
-      columns={4}
+      title="Aménagement d'un escalier sur mesure à Bayonne"
+      meta="Bayonne · Maison"
+      description="Dans cette maison à Bayonne, Kaza Intérieur a réalisé un aménagement en bois sur mesure autour de l'escalier : placards intégrés, marches et contremarches, dans un espace réduit."
+      galleryLabel="Galerie du projet à Bayonne"
+      images={amenagementBayonneImages}
+      columns={3}
+      href="/realisations/amenagement-escalier-sur-mesure-bayonne"
     />
   );
 }

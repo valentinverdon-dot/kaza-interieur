@@ -10,10 +10,9 @@ const projectImages = [
     { length: 6 },
     (_, index) => `/projects/project-2-parquet/Parquet_${index + 1}.jpeg`,
   ),
-  ...Array.from(
-    { length: 8 },
-    (_, index) => `/projects/project-3-amenagement/Amenagement_${index + 1}.webp`,
-  ),
+  "/projects/project-3-amenagement/Amenagement_7.webp",
+  "/projects/project-3-amenagement/Amenagement_6.webp",
+  "/projects/project-3-amenagement/Amenagement_5.webp",
   "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp",
   "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-couloir.webp",
   "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp",
@@ -68,12 +67,12 @@ const routes: MetadataRoute.Sitemap = [
   },
   {
     url: `${SITE_URL}/services/amenagement-interieur`,
-    lastModified: "2026-08-30",
+    lastModified: "2026-09-22",
     images: [
       `${SITE_URL}/services/service-amenagement.webp`,
-      `${SITE_URL}/projects/project-3-amenagement/Amenagement_1.webp`,
       `${SITE_URL}/projects/project-3-amenagement/Amenagement_7.webp`,
-      `${SITE_URL}/projects/project-3-amenagement/Amenagement_8.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_6.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_5.webp`,
     ],
   },
   {
@@ -114,6 +113,17 @@ const routes: MetadataRoute.Sitemap = [
       `${SITE_URL}/projects/cuisine-noire-anglet/pose-cuisine-ixina-anglet.webp`,
       `${SITE_URL}/projects/cuisine-noire-anglet/cuisine-noire-bois-ilot-anglet.webp`,
       `${SITE_URL}/projects/cuisine-noire-anglet/installation-cuisine-equipee-anglet.webp`,
+    ],
+  },
+  {
+    url: `${SITE_URL}/realisations/amenagement-escalier-sur-mesure-bayonne`,
+    lastModified: "2026-09-22",
+    images: [
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_7.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_6.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_5.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_4.webp`,
+      `${SITE_URL}/projects/project-3-amenagement/Amenagement_2.webp`,
     ],
   },
   {

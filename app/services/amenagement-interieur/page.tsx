@@ -307,40 +307,41 @@ export default function AmenagementInterieurPage() {
           <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
             <div>
               <p className="text-xs font-semibold tracking-[0.22em] text-accent uppercase">
-                Rénovation d’un escalier
+                Réalisation à Bayonne
               </p>
-              <h2 className="heading-h2 mt-3">Un passage entièrement intégré à la pièce</h2>
+              <h2 className="heading-h2 mt-3">
+                Aménagement d’un escalier sur mesure à Bayonne
+              </h2>
               <p className="body-text mt-5 max-w-3xl text-gray-600">
-                Cet escalier a été habillé avec du parquet sur les marches, des
-                nez de marche en aluminium et des plinthes blanches. La mise en
-                peinture des contremarches et les finitions ont permis de créer
-                une continuité propre avec le sol et le reste de l’intérieur.
+                Dans cette maison, Kaza Intérieur a réalisé un aménagement en
+                bois sur mesure autour de l’escalier : placards intégrés,
+                marches et contremarches, dans un espace réduit.
               </p>
             </div>
             <Link
-              href="/realisations"
+              href="/realisations/amenagement-escalier-sur-mesure-bayonne"
               className="btn-outline inline-block px-6 py-3 text-sm font-bold tracking-wider"
             >
-              Voir toutes les réalisations
+              Voir cette réalisation
             </Link>
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {[
               {
-                src: "/projects/project-3-amenagement/Amenagement_1.webp",
-                alt: "Pièce aménagée avec parquet et escalier rénové par Kaza",
-                caption: "Une continuité entre le sol et l’escalier",
-              },
-              {
                 src: "/projects/project-3-amenagement/Amenagement_7.webp",
-                alt: "Escalier habillé de parquet avec contremarches blanches",
-                caption: "Habillage des marches et finitions",
+                alt: "Aménagement d’escalier sur mesure dans une maison à Bayonne",
+                caption: "L’escalier après la réalisation des marches et contremarches",
               },
               {
-                src: "/projects/project-3-amenagement/Amenagement_8.webp",
-                alt: "Escalier rénové vu depuis l’étage",
-                caption: "Résultat après les réglages et la mise en peinture",
+                src: "/projects/project-3-amenagement/Amenagement_6.webp",
+                alt: "Escalier aménagé dans un volume réduit à Bayonne",
+                caption: "Un aménagement calé sur un espace réduit",
+              },
+              {
+                src: "/projects/project-3-amenagement/Amenagement_5.webp",
+                alt: "Marches en bois d’un palier quart-tournant à Bayonne",
+                caption: "Détail des marches en bois",
               },
             ].map((image) => (
               <figure key={image.src}>
@@ -350,7 +351,7 @@ export default function AmenagementInterieurPage() {
                     alt={image.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover object-[center_70%]"
                   />
                 </div>
                 <figcaption className="mt-3 text-sm text-gray-500">

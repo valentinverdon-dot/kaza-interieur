@@ -23,6 +23,17 @@ const parquetAngletImages = [
   },
 ];
 
+const parquetBiarritzImages = [
+  {
+    src: "/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-chambre.webp",
+    alt: "Parquet massif et plinthes après pose dans une chambre à Biarritz",
+  },
+  {
+    src: "/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-en-cours.webp",
+    alt: "Pose collée de parquet massif en cours dans une chambre à Biarritz",
+  },
+];
+
 export default function ProjectParquet() {
   return (
     <>
@@ -34,6 +45,15 @@ export default function ProjectParquet() {
         images={parquetAngletImages}
         columns={3}
         href="/realisations/pose-parquet-contrecolle-anglet"
+      />
+      <ProjectGallery
+        title="Pose de parquet massif à Biarritz"
+        meta="10 m² · Pose collée"
+        description="À Biarritz, Kaza Intérieur a réalisé la pose collée de 10 m² de parquet massif dans une chambre. Le parquet a été collé directement sur la chape béton, sans sous-couche, avec pose des plinthes, finitions périphériques et ajustement au niveau du seuil."
+        galleryLabel="Galerie du projet à Biarritz"
+        images={parquetBiarritzImages}
+        columns={3}
+        href="/realisations/pose-parquet-massif-biarritz"
       />
       <ProjectGallery
         title="Pose de parquet contrecollé"

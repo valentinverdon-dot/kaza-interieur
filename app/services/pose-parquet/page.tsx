@@ -271,7 +271,7 @@ export default function PoseParquetPage() {
               Pose collée à Biarritz
             </p>
             <h2 className="heading-h2 mt-3">
-              Parquet massif dans une chambre de 10 m²
+              Pose de parquet massif à Biarritz – 10 m²
             </h2>
             <p className="body-text mt-5 text-gray-600">
               Ce chantier illustre les différentes étapes d&apos;une pose collée :
@@ -283,6 +283,12 @@ export default function PoseParquetPage() {
               Le collage direct permet d&apos;obtenir un parquet stable et un rendu
               chaleureux, ici adapté à la rénovation d&apos;une chambre à Biarritz.
             </p>
+            <Link
+              href="/realisations/pose-parquet-massif-biarritz"
+              className="btn-outline mt-8 inline-block px-6 py-3 text-sm font-bold tracking-wider"
+            >
+              Voir cette réalisation
+            </Link>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">

@@ -17,6 +17,8 @@ const projectImages = [
   "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp",
   "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-couloir.webp",
   "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp",
+  "/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-chambre.webp",
+  "/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-en-cours.webp",
 ].map((image) => `${SITE_URL}${image}`);
 
 const routes: MetadataRoute.Sitemap = [
@@ -83,6 +85,14 @@ const routes: MetadataRoute.Sitemap = [
       `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp`,
       `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-couloir.webp`,
       `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-chambre.webp`,
+    ],
+  },
+  {
+    url: `${SITE_URL}/realisations/pose-parquet-massif-biarritz`,
+    lastModified: "2026-09-22",
+    images: [
+      `${SITE_URL}/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-chambre.webp`,
+      `${SITE_URL}/projects/project-5-parquet-massif-biarritz/pose-parquet-massif-colle-biarritz-en-cours.webp`,
     ],
   },
   {

@@ -3,27 +3,27 @@ import FadeIn from "@/components/FadeIn";
 const steps = [
   {
     number: "1",
-    title: "Premier contact",
+    title: "Premier échange",
     description:
-      "Échangez avec moi sur votre projet via le formulaire en ligne ou par téléphone. Je vous recontacte rapidement.",
+      "Nous échangeons sur votre projet, vos besoins, vos contraintes et votre budget.",
   },
   {
     number: "2",
-    title: "Échange détaillé",
+    title: "Visite & étude du projet",
     description:
-      "Nous discutons en détail de vos besoins et j'organise une visite sur place si nécessaire.",
+      "Nous étudions l’existant, les travaux nécessaires et les différentes solutions possibles.",
   },
   {
     number: "3",
-    title: "Devis personnalisé",
+    title: "Proposition & organisation",
     description:
-      "Je vous propose un devis transparent et détaillé, avec délais et matériaux proposés.",
+      "Vous recevez une proposition détaillée. Nous définissons les différentes interventions et organisons le chantier.",
   },
   {
     number: "4",
-    title: "Réalisation",
+    title: "Réalisation & suivi",
     description:
-      "Je réalise votre projet avec rigueur, dans les règles de l'art, en respectant les délais convenus.",
+      "Les travaux sont réalisés avec un suivi du chantier jusqu’aux finitions et à la réception.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Approche() {
             Comment ça marche ?
           </p>
           <h2 className="heading-h2 mt-3 text-center !mb-0">
-            Une méthode simple et efficace pour réaliser vos projets
+            Votre projet, de l’étude à la réalisation
           </h2>
         </FadeIn>
 

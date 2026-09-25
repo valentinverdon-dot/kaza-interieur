@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  Home,
   LayoutGrid,
   DoorClosed,
   type LucideIcon,
@@ -53,28 +54,28 @@ export const savoirFaireCards: {
   linkLabel: string;
 }[] = [
   {
-    title: "Cuisine",
+    title: "Rénovation intérieure",
     description:
-      "Pose et aménagement de cuisines sur mesure : plans de travail, rangements et crédences pour un espace fonctionnel et esthétique.",
-    icon: KitchenFurnitureIcon,
-    href: "/services/pose-cuisine",
-    linkLabel: "Découvrir la cuisine",
+      "Transformation et rénovation de vos espaces : préparation, cloisons, sols, équipements et finitions.",
+    icon: Home,
+    href: "/services",
+    linkLabel: "Découvrir la rénovation intérieure",
   },
   {
-    title: "Parquet",
+    title: "Parquet & sols",
     description:
-      "Pose de parquet massif, contrecollé ou stratifié. Pose collée ou flottante, selon votre support et vos usages.",
+      "Pose de parquet et revêtements de sol, préparation adaptée du support, plinthes et finitions.",
     icon: LayoutGrid,
     href: "/services/pose-parquet",
-    linkLabel: "Découvrir la pose de parquet",
+    linkLabel: "Découvrir parquet & sols",
   },
   {
-    title: "Aménagement",
+    title: "Agencement intérieur",
     description:
-      "Dressings, placards, cloisons et aménagements intérieurs sur mesure pour optimiser chaque mètre carré de votre logement.",
+      "Dressings, placards, rangements, menuiserie intérieure et solutions d’aménagement adaptées à votre espace.",
     icon: DoorClosed,
     href: "/services/amenagement-interieur",
-    linkLabel: "Découvrir l'aménagement",
+    linkLabel: "Découvrir l’aménagement",
   },
 ];
 
@@ -115,14 +116,32 @@ export default function SavoirFaire({ showLink = false }: SavoirFaireProps) {
       <div className="container-site">
         <FadeIn>
           <p className="text-center text-xs font-semibold tracking-[0.22em] text-gray-500 uppercase">
-            MON SAVOIR FAIRE
+            VOTRE PROJET
           </p>
-          <p className="body-text mx-auto mt-5 max-w-3xl text-center text-gray-600">
-            En tant qu&apos;artisan français indépendant depuis 2020, je mets mon
-            expertise au service de vos projets. Cuisine, parquet et aménagement
-            intérieur : trois domaines pour des réalisations durables et sur
-            mesure. Chaque projet bénéficie de mon engagement personnel pour un
-            résultat à la hauteur de vos attentes.
+          <h2 className="heading-h2 mt-3 text-center !mb-0">
+            Un accompagnement pour transformer votre intérieur
+          </h2>
+          <div className="body-text mx-auto mt-5 max-w-3xl space-y-5 text-center text-gray-600">
+            <p>
+              Vous souhaitez rénover une pièce, transformer plusieurs espaces
+              ou repenser votre intérieur ?
+            </p>
+            <p>
+              Kaza Intérieur vous accompagne dans la réalisation de votre
+              projet, avec un interlocuteur de proximité pour simplifier les
+              travaux et assurer une exécution soignée.
+            </p>
+            <p>
+              Nous intervenons directement sur nos métiers et pouvons nous
+              entourer de professionnels partenaires lorsque le projet
+              nécessite d&apos;autres compétences.
+            </p>
+          </div>
+        </FadeIn>
+
+        <FadeIn className="mt-12">
+          <p className="text-center text-xs font-semibold tracking-[0.22em] text-gray-500 uppercase">
+            NOS SAVOIR-FAIRE
           </p>
         </FadeIn>
 

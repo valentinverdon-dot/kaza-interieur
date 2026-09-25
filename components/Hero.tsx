@@ -8,28 +8,24 @@ export default function Hero() {
       <div className="container-site flex flex-col items-center gap-10 lg:flex-row lg:gap-12">
         <FadeIn className="w-full lg:w-1/2">
           <h1 className="heading-h1">
-            Rénovez votre intérieur avec confiance
+            Rénovation et aménagement intérieur au Pays basque
           </h1>
           <div className="mt-5 max-w-xl space-y-5">
             <p className="body-text">
-              Transformez votre intérieur avec un professionnel basé à
-              Anglet, intervenant à Biarritz, Bayonne et dans les communes
-              alentour.
+              Kaza Intérieur vous accompagne dans vos projets de rénovation et
+              de transformation à Anglet, Biarritz, Bayonne et alentours.
             </p>
             <p className="body-text">
-              Cuisine, parquet et aménagement intérieur : des projets réalisés
-              avec passion et rigueur depuis 2020.
-            </p>
-            <p className="body-text">
-              Mes clients apprécient mon sérieux, ma discrétion et ma capacité à
-              transformer leurs espaces sans complication.
+              De l&apos;aménagement aux travaux de finition, nous vous
+              accompagnons pour créer un intérieur cohérent, fonctionnel et
+              durable.
             </p>
           </div>
           <Link
-            href="/services"
+            href="/contact"
             className="btn-cta mt-8 inline-block bg-accent px-8 py-3.5 text-sm font-bold tracking-wider text-white"
           >
-            DÉCOUVRIR NOS SERVICES
+            Parler de mon projet
           </Link>
         </FadeIn>
 

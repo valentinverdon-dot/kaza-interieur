@@ -17,7 +17,7 @@ const localBusiness = {
       name: "Kaza Intérieur",
       alternateName: "Kaza",
       description:
-        "Artisan en pose de cuisine, parquet et aménagement intérieur à Anglet, Biarritz et Bayonne.",
+        "Entreprise de rénovation et d’aménagement intérieur à Anglet, Biarritz, Bayonne et sur la Côte basque.",
       url: SITE_URL,
       logo: `${SITE_URL}/kaza-logo.svg`,
       image: `${SITE_URL}/hero.webp`,
@@ -41,9 +41,10 @@ const localBusiness = {
         { "@type": "City", name: "Bayonne" },
       ],
       knowsAbout: [
-        "Pose de cuisine",
-        "Pose de parquet",
+        "Rénovation intérieure",
         "Aménagement intérieur",
+        "Pose de parquet",
+        "Pose de cuisine",
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -51,11 +52,10 @@ const localBusiness = {
         itemListElement: [
           {
             "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Pose de cuisine" },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Pose de parquet" },
+            itemOffered: {
+              "@type": "Service",
+              name: "Rénovation intérieure",
+            },
           },
           {
             "@type": "Offer",
@@ -63,6 +63,14 @@ const localBusiness = {
               "@type": "Service",
               name: "Aménagement intérieur",
             },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Pose de parquet" },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: "Pose de cuisine" },
           },
         ],
       },

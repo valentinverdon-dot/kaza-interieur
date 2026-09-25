@@ -17,18 +17,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Cuisine, parquet et aménagement intérieur au Pays basque | Kaza",
+    default: "Rénovation et aménagement intérieur au Pays basque | Kaza",
     template: "%s | Kaza",
   },
   description:
-    "Kaza réalise vos projets de cuisine, parquet et aménagement intérieur à Anglet, Biarritz, Bayonne et au Pays basque.",
+    "Kaza Intérieur accompagne vos projets de rénovation et d’aménagement intérieur à Anglet, Biarritz, Bayonne et sur la Côte basque.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Cuisine, parquet et aménagement intérieur au Pays basque | Kaza",
+    title: "Rénovation et aménagement intérieur au Pays basque | Kaza",
     description:
-      "Kaza réalise vos projets de cuisine, parquet et aménagement intérieur à Anglet, Biarritz, Bayonne et au Pays basque.",
+      "Kaza Intérieur accompagne vos projets de rénovation et d’aménagement intérieur à Anglet, Biarritz, Bayonne et sur la Côte basque.",
     url: SITE_URL,
     siteName: "Kaza Intérieur",
     locale: "fr_FR",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cuisine, parquet et aménagement intérieur au Pays basque | Kaza",
+    title: "Rénovation et aménagement intérieur au Pays basque | Kaza",
     description:
-      "Kaza réalise vos projets de cuisine, parquet et aménagement intérieur à Anglet, Biarritz, Bayonne et au Pays basque.",
+      "Kaza Intérieur accompagne vos projets de rénovation et d’aménagement intérieur à Anglet, Biarritz, Bayonne et sur la Côte basque.",
     images: [{ url: SOCIAL_IMAGE_URL, alt: SOCIAL_IMAGE_ALT }],
   },
   keywords: [

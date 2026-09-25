@@ -18,7 +18,7 @@ export default function FAQ({
   items = homeFaqs,
   showLink = false,
   showIntro = true,
-  intro = "Quelques réponses aux questions les plus fréquentes sur mes prestations de cuisine, parquet et aménagement intérieur.",
+  intro = "Quelques réponses aux questions les plus fréquentes sur nos prestations de rénovation et d’aménagement intérieur.",
   asPage = false,
 }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

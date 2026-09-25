@@ -16,7 +16,7 @@ export default function Home() {
       <Portfolio
         showLink
         title="Réalisations"
-        description="Retrouvez l'ensemble de nos projets d'aménagement intérieur, parquet et cuisine réalisés sur la Côte Basque."
+        description="Découvrez quelques projets de rénovation et d’aménagement réalisés sur la Côte basque."
       />
       <Approche />
       <FAQ showLink />

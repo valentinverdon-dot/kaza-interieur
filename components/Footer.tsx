@@ -3,9 +3,9 @@ import Link from "next/link";
 const chezKazaLinks = [
   { href: "/realisations", label: "Réalisations" },
   { href: "/services", label: "Services" },
-  { href: "/services/pose-cuisine", label: "Pose de cuisine" },
-  { href: "/services/pose-parquet", label: "Pose de parquet" },
   { href: "/services/amenagement-interieur", label: "Aménagement intérieur" },
+  { href: "/services/pose-parquet", label: "Pose de parquet" },
+  { href: "/services/pose-cuisine", label: "Pose de cuisine" },
   { href: "/a-propos", label: "À propos" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
@@ -31,7 +31,7 @@ export default function Footer() {
             <span className="text-[#1a2e4a]">A</span>
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#555]">
-            Aménagement intérieur, pensé pour votre confort.
+            Rénovation et aménagement intérieur sur la Côte basque.
           </p>
         </div>
 

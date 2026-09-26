@@ -374,6 +374,17 @@ export default function AmenagementInterieurPage() {
               Kaza peut réunir plusieurs interventions dans un même chantier
               afin de conserver une organisation et des finitions cohérentes.
             </p>
+            <p className="body-text mt-4 !text-white">
+              Si le projet concerne plusieurs pièces ou une transformation plus
+              large du logement, ces interventions peuvent être réunies dans un
+              même accompagnement.
+            </p>
+            <Link
+              href="/services/renovation-interieure"
+              className="mt-5 inline-block text-sm font-bold text-accent transition-colors hover:text-white"
+            >
+              Découvrir l’accompagnement en rénovation intérieure
+            </Link>
           </div>
           <div className="flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center lg:justify-end">
             <Link

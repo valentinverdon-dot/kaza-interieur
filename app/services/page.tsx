@@ -124,6 +124,18 @@ export default function ServicesPage() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn className="mt-16 text-center">
+          <p className="body-text text-gray-600">
+            Quelques projets déjà réalisés sur la Côte basque.
+          </p>
+          <Link
+            href="/realisations"
+            className="btn-outline mt-6 inline-block px-6 py-3 text-sm font-bold tracking-wider"
+          >
+            Découvrir nos réalisations
+          </Link>
+        </FadeIn>
       </section>
     </div>
   );

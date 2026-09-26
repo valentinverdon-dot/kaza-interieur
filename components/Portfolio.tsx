@@ -11,6 +11,7 @@ export const featuredProjects = [
     image: "/projects/project-1-cuisine/Cuisine_8.webp",
     alt: "Cuisine blanche équipée posée par Kaza à Anglet",
     tone: "#1a2e4a",
+    href: "/realisations/pose-cuisine-ikea-anglet",
   },
   {
     title: "Parquet",
@@ -18,12 +19,14 @@ export const featuredProjects = [
       "/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp",
     alt: "Parquet contrecollé posé dans un salon à Anglet",
     tone: "#5c4033",
+    href: "/realisations/pose-parquet-contrecolle-anglet",
   },
   {
     title: "Aménagement",
     image: "/projects/project-3-amenagement/Amenagement_7.webp",
     alt: "Escalier habillé de parquet et rénové par Kaza",
     tone: "#4a6741",
+    href: "/realisations/amenagement-escalier-sur-mesure-bayonne",
   },
 ];
 
@@ -68,28 +71,38 @@ export default function Portfolio({
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featuredProjects.map((project, i) => (
             <FadeIn key={project.title} delay={i * 80}>
-              <button
-                type="button"
-                onClick={() => setSelected(project)}
-                className="group w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
-                aria-label={`Voir ${project.title}`}
-              >
-                <div className="portfolio-card">
-                  <Image
-                    src={project.image}
-                    alt={project.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
-                  />
-                  <div className="portfolio-overlay">
-                    <span>{project.title}</span>
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setSelected(project)}
+                  className="group w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                  aria-label={`Voir ${project.title}`}
+                >
+                  <div className="portfolio-card">
+                    <Image
+                      src={project.image}
+                      alt={project.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                    />
+                    <div className="portfolio-overlay">
+                      <span>{project.title}</span>
+                    </div>
                   </div>
-                </div>
+                </button>
                 <p className="mt-3 text-center text-sm font-semibold text-primary">
                   {project.title}
                 </p>
-              </button>
+                <p className="mt-1 text-center">
+                  <Link
+                    href={project.href}
+                    className="text-sm font-semibold text-primary underline underline-offset-4 transition-colors duration-300 ease-out hover:text-accent"
+                  >
+                    Voir le projet
+                  </Link>
+                </p>
+              </div>
             </FadeIn>
           ))}
         </div>
@@ -152,6 +165,13 @@ export default function Portfolio({
                 Projet réalisé par Kaza — Valentin Verdon, Anglet (Pays
                 Basque).
               </p>
+              <Link
+                href={selected.href}
+                onClick={(e) => e.stopPropagation()}
+                className="mt-4 inline-block text-sm font-semibold text-primary underline underline-offset-4 transition-colors duration-300 ease-out hover:text-accent"
+              >
+                Voir le projet
+              </Link>
             </div>
           </div>
         </div>

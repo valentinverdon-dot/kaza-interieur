@@ -315,6 +315,17 @@ export default function PoseCuisinePage() {
               plombier ou d’un électricien sont réalisés par les professionnels
               compétents.
             </p>
+            <p className="body-text mt-4 !text-white">
+              Lorsque la cuisine s’inscrit dans une transformation plus globale
+              du logement, les différentes interventions peuvent être étudiées
+              dans un même projet.
+            </p>
+            <Link
+              href="/services/renovation-interieure"
+              className="mt-5 inline-block text-sm font-bold text-accent transition-colors hover:text-white"
+            >
+              Découvrir l’accompagnement en rénovation intérieure
+            </Link>
           </div>
         </div>
       </section>

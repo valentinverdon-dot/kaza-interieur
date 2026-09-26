@@ -278,8 +278,8 @@ export default function RenovationInterieurePage() {
 
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
           <Image
-            src="/services/service-amenagement.webp"
-            alt="Travaux d’aménagement intérieur réalisés par Kaza sur la Côte basque"
+            src="/services/service-renovation.webp"
+            alt="Chantier de rénovation intérieure avec pose de cloison"
             fill
             preload
             sizes="(max-width: 1024px) 100vw, 50vw"

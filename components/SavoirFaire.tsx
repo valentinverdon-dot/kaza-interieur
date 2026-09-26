@@ -58,7 +58,7 @@ export const savoirFaireCards: {
     description:
       "Transformation et rénovation de vos espaces : préparation, cloisons, sols, équipements et finitions.",
     icon: Home,
-    href: "/services",
+    href: "/services/renovation-interieure",
     linkLabel: "Découvrir la rénovation intérieure",
   },
   {

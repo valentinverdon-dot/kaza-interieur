@@ -3,6 +3,7 @@ import Link from "next/link";
 const chezKazaLinks = [
   { href: "/realisations", label: "Réalisations" },
   { href: "/services", label: "Services" },
+  { href: "/services/renovation-interieure", label: "Rénovation intérieure" },
   { href: "/services/amenagement-interieur", label: "Aménagement intérieur" },
   { href: "/services/pose-parquet", label: "Pose de parquet" },
   { href: "/services/pose-cuisine", label: "Pose de cuisine" },

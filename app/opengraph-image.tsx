@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Kaza Intérieur — cuisine, parquet et aménagement intérieur au Pays basque";
+  "Kaza Intérieur — rénovation et aménagement intérieur au Pays basque";
 
 export const size = {
   width: 1200,
@@ -46,7 +46,7 @@ export default function OpenGraphImage() {
               fontWeight: 750,
             }}
           >
-            Cuisine, parquet et aménagement intérieur
+            Rénovation et aménagement intérieur
           </div>
           <div
             style={{

@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Contact",
   description:
-    "Contactez Valentin Verdon – Kaza à Anglet pour un devis cuisine, parquet ou aménagement intérieur.",
+    "Contactez Kaza Intérieur à Anglet pour un devis de rénovation ou d’aménagement intérieur.",
   path: "/contact",
 });
 

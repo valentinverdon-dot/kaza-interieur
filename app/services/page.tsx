@@ -4,7 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Rénovation et aménagement intérieur au Pays basque",
+  title: "Services de rénovation et d’aménagement intérieur au Pays basque",
   description:
     "Découvrez les prestations de Kaza Intérieur pour vos projets de rénovation et d’aménagement à Anglet, Biarritz, Bayonne et sur la Côte basque.",
   path: "/services",
@@ -20,7 +20,7 @@ const services = [
     linkLabel: "Découvrir la rénovation intérieure",
     image: {
       src: "/services/service-renovation.webp",
-      alt: "Travaux d’aménagement intérieur réalisés par Kaza sur la Côte basque",
+      alt: "Chantier de rénovation intérieure avec pose de cloison",
     },
   },
   {
@@ -70,7 +70,7 @@ export default function ServicesPage() {
             PRESTATIONS
           </p>
           <h1 className="heading-h1 mt-3">
-            Rénovation et aménagement intérieur au Pays basque
+            Nos prestations de rénovation et d’aménagement intérieur
           </h1>
           <p className="body-text mt-6 max-w-2xl text-gray-600">
             Kaza Intérieur vous accompagne dans vos projets de rénovation et de

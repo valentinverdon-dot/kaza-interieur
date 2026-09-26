@@ -6,9 +6,9 @@ import FadeIn from "@/components/FadeIn";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Réalisations cuisine, parquet et aménagement intérieur",
+  title: "Réalisations de rénovation et d’aménagement intérieur",
   description:
-    "Découvrez les réalisations Kaza en cuisine, parquet et aménagement intérieur au Pays basque.",
+    "Découvrez les projets de rénovation et d’aménagement intérieur réalisés par Kaza Intérieur sur la Côte basque.",
   path: "/realisations",
 });
 

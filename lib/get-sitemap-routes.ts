@@ -26,23 +26,24 @@ const projectImages = [
 const routes: MetadataRoute.Sitemap = [
   {
     url: SITE_URL,
-    lastModified: "2026-08-30",
+    lastModified: "2026-09-26",
     images: [`${SITE_URL}/hero.webp`],
   },
   {
     url: `${SITE_URL}/services`,
-    lastModified: "2026-08-30",
+    lastModified: "2026-09-26",
     images: [
-      `${SITE_URL}/services/service-cuisine.webp`,
-      `${SITE_URL}/services/service-parquet.webp`,
+      `${SITE_URL}/services/service-renovation.webp`,
       `${SITE_URL}/services/service-amenagement.webp`,
+      `${SITE_URL}/services/service-parquet.webp`,
+      `${SITE_URL}/services/service-cuisine.webp`,
     ],
   },
   {
     url: `${SITE_URL}/services/renovation-interieure`,
     lastModified: "2026-09-26",
     images: [
-      `${SITE_URL}/services/service-amenagement.webp`,
+      `${SITE_URL}/services/service-renovation.webp`,
       `${SITE_URL}/projects/project-4-parquet-anglet/pose-parquet-contrecolle-anglet-salon.webp`,
       `${SITE_URL}/projects/project-1-cuisine/Cuisine_8.webp`,
       `${SITE_URL}/projects/project-3-amenagement/Amenagement_7.webp`,

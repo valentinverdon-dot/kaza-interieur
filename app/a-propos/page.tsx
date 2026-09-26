@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "À propos",
   description:
-    "Valentin Verdon, poseur spécialisé en aménagement intérieur depuis 2020 — cuisine, parquet et aménagement sur la Côte Basque.",
+    "Découvrez Kaza Intérieur et Valentin Verdon : rénovation et aménagement intérieur sur la Côte basque.",
   path: "/a-propos",
 });
 

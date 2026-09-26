@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Foire aux questions",
   description:
-    "Retrouvez toutes les réponses à vos questions sur mes prestations d'aménagement intérieur — cuisine, parquet et aménagement sur la Côte Basque.",
+    "Questions fréquentes sur les prestations de rénovation et d’aménagement intérieur de Kaza Intérieur.",
   path: "/faq",
 });
 

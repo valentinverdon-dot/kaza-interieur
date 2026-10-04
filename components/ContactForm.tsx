@@ -2,10 +2,28 @@
 
 import { FormEvent, useState } from "react";
 
+const GOOGLE_ADS_CONVERSION_SEND_TO = "AW-18494243436/F9ULCNPk-5AdEOyE3_JE";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 type ContactFormProps = {
   dark?: boolean;
   horizontal?: boolean;
 };
+
+function trackQuoteRequestConversion() {
+  if (typeof window.gtag !== "function") return;
+
+  window.gtag("event", "conversion", {
+    send_to: GOOGLE_ADS_CONVERSION_SEND_TO,
+    value: 1.0,
+    currency: "EUR",
+  });
+}
 
 export default function ContactForm({
   dark = false,
@@ -33,6 +51,9 @@ export default function ContactForm({
       });
 
       if (res.ok) {
+        if (!website.trim()) {
+          trackQuoteRequestConversion();
+        }
         setStatus("success");
         form.reset();
       } else {

@@ -30,7 +30,7 @@ export default function Header() {
             <span className="text-[#1a2e4a]">A</span>
           </span>
           <span className="mt-2.5 hidden text-[10px] tracking-[1px] text-[#666666] md:block">
-            AMÉNAGEMENT INTÉRIEUR — CÔTE BASQUE
+            RÉNOVATION & AMÉNAGEMENT INTÉRIEUR - CÔTE BASQUE
           </span>
         </Link>
 

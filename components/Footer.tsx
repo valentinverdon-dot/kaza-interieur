@@ -1,5 +1,26 @@
 import Link from "next/link";
 
+function InstagramIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
 const chezKazaLinks = [
   { href: "/realisations", label: "Réalisations" },
   { href: "/services", label: "Services" },
@@ -95,6 +116,17 @@ export default function Footer() {
                 className="text-[#444] transition-colors hover:text-[#1a2e4a]"
               >
                 valentin@kaza-interieur.fr
+              </a>
+            </li>
+            <li className="pt-1">
+              <a
+                href="https://www.instagram.com/kaza.interieur/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Kaza Intérieur"
+                className="inline-flex text-[#1a2e4a] transition-colors hover:text-[#e74c3c]"
+              >
+                <InstagramIcon />
               </a>
             </li>
           </ul>

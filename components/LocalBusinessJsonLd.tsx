@@ -19,6 +19,7 @@ const localBusiness = {
       description:
         "Entreprise de rénovation et d’aménagement intérieur à Anglet, Biarritz, Bayonne et sur la Côte basque.",
       url: SITE_URL,
+      sameAs: ["https://www.instagram.com/kaza.interieur/"],
       logo: `${SITE_URL}/kaza-logo.svg`,
       image: `${SITE_URL}/hero.webp`,
       telephone: "+33620400372",
